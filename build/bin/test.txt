@@ -1,0 +1,19 @@
+#include <iostream>
+int main(){
+    int a = 1.1;
+    int b = 1.2222e+2 * 1.2e-2;
+    int c = 55E-2;
+    int d = .11;
+    int e = 333.;
+    if(b+c==3||a<=3&&a/b!=c){
+        cout<<"a+b=c";
+        cout<<'a';
+        /*this is
+        the second annotation
+        the third annotation*/
+    }
+    $
+    float d=1..1;
+    @//this is an error
+    return 0;
+}

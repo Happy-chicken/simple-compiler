@@ -1,0 +1,9 @@
+E:/code/C_C++/Compiler/build/CMakeFiles/Compiler.dir
+E:/code/C_C++/Compiler/build/CMakeFiles/edit_cache.dir
+E:/code/C_C++/Compiler/build/CMakeFiles/rebuild_cache.dir
+E:/code/C_C++/Compiler/build/lex/CMakeFiles/lex.dir
+E:/code/C_C++/Compiler/build/lex/CMakeFiles/edit_cache.dir
+E:/code/C_C++/Compiler/build/lex/CMakeFiles/rebuild_cache.dir
+E:/code/C_C++/Compiler/build/syn/CMakeFiles/syn.dir
+E:/code/C_C++/Compiler/build/syn/CMakeFiles/edit_cache.dir
+E:/code/C_C++/Compiler/build/syn/CMakeFiles/rebuild_cache.dir

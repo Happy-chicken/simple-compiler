@@ -1,0 +1,32 @@
+{
+	int a, b, a;
+	double c, d;
+	int e; 
+	int b;
+	e = 1 + 5 - (3 * (4 / 2));
+	a = 1.3e3;
+	if (a < 1 || a > 3
+	{
+		a = 3;
+		b = b - 1;
+	}
+	while (a >= 10 && b)
+	{
+		if (a == a * b) // nonfatal error
+		{
+			a = a - 1;
+			b = b + 1;
+		}
+	}
+	
+	do{
+		a = 1;
+		
+	}while (a==b || c!=d);
+	b = 2 / 0;
+	/*{
+		int a;
+		a = 2;
+	}*/
+	
+}

@@ -1,0 +1,17 @@
+[
+{
+  "directory": "E:/code/C_C++/Compiler/build",
+  "command": "D:\\vscode\\mingw64\\bin\\g++.exe  @CMakeFiles/Compiler.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Compiler.dir\\main.cpp.obj -c E:\\code\\C_C++\\Compiler\\src\\main.cpp",
+  "file": "E:/code/C_C++/Compiler/src/main.cpp"
+},
+{
+  "directory": "E:/code/C_C++/Compiler/build/lex",
+  "command": "D:\\vscode\\mingw64\\bin\\g++.exe  @CMakeFiles/lex.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\lex.dir\\lexical_analysis.cpp.obj -c E:\\code\\C_C++\\Compiler\\src\\lex\\lexical_analysis.cpp",
+  "file": "E:/code/C_C++/Compiler/src/lex/lexical_analysis.cpp"
+},
+{
+  "directory": "E:/code/C_C++/Compiler/build/syn",
+  "command": "D:\\vscode\\mingw64\\bin\\g++.exe  @CMakeFiles/syn.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\syn.dir\\syntax_analysis.cpp.obj -c E:\\code\\C_C++\\Compiler\\src\\syn\\syntax_analysis.cpp",
+  "file": "E:/code/C_C++/Compiler/src/syn/syntax_analysis.cpp"
+}
+]

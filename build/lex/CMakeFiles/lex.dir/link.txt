@@ -1,0 +1,2 @@
+D:\vscode\mingw64\bin\ar.exe qc liblex.a CMakeFiles/lex.dir/lexical_analysis.cpp.obj
+D:\vscode\mingw64\bin\ranlib.exe liblex.a

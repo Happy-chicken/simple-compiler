@@ -1,0 +1,10947 @@
+I0:
+'->.P,$			goto(P)=I1
+P->.B,$			goto(B)=I2
+B->.{DS},$			action({)=I3
+I1:
+'->P.,$ Accept
+I2:
+P->B.,$			Use P->B to reduce for terminal symbol $
+I3:
+B->{.DS},$			goto(D)=I4
+D->.A;D,2diw{}			goto(A)=I5
+D->.@,2diw{}			Use D-> to reduce for terminal symbol 2diw{}
+A->.A,2,;
+A->.h2,;			action(h)=I6
+A->.z2,;			action(z)=I7
+A->.A,2,,
+A->.h2,,
+A->.z2,,
+I4:
+B->{D.S},$			goto(S)=I8
+S->.SF,}
+S->.@,}			Use S-> to reduce for terminal symbol }
+S->.SF,2diw{}
+S->.@,2diw{}			Use S-> to reduce for terminal symbol 2diw{}
+I5:
+D->A.;D,2diw{}			action(;)=I9
+A->A.,2,;			action(,)=I10
+A->A.,2,,
+I6:
+A->h.2,;			action(2)=I11
+A->h.2,,
+I7:
+A->z.2,;			action(2)=I12
+A->z.2,,
+I8:
+B->{DS.},$			action(})=I13
+S->S.F,}			goto(F)=I14
+S->S.F,2diw{}
+F->.CF,}			goto(C)=I15
+F->.GF,}			goto(G)=I16
+F->.LH;,}			goto(L)=I17
+F->.WF,}			goto(W)=I18
+F->.2=E;,}			action(2)=I19
+F->.B,}			goto(B)=I20
+F->.CF,2diw{}
+F->.GF,2diw{}
+F->.LH;,2diw{}
+F->.WF,2diw{}
+F->.2=E;,2diw{}
+F->.B,2diw{}
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},}			action({)=I23
+B->.{DS},2diw{}
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+I9:
+D->A;.D,2diw{}			goto(D)=I26
+D->.A;D,2diw{}			goto(A)=I5
+D->.@,2diw{}			Use D-> to reduce for terminal symbol 2diw{}
+A->.A,2,;
+A->.h2,;			action(h)=I6
+A->.z2,;			action(z)=I7
+A->.A,2,,
+A->.h2,,
+A->.z2,,
+I10:
+A->A,.2,;			action(2)=I27
+A->A,.2,,
+I11:
+A->h2.,;			Use A->h2 to reduce for terminal symbol ;
+A->h2.,,			Use A->h2 to reduce for terminal symbol ,
+I12:
+A->z2.,;			Use A->z2 to reduce for terminal symbol ;
+A->z2.,,			Use A->z2 to reduce for terminal symbol ,
+I13:
+B->{DS}.,$			Use B->{DS} to reduce for terminal symbol $
+I14:
+S->SF.,}			Use S->SF to reduce for terminal symbol }
+S->SF.,2diw{}			Use S->SF to reduce for terminal symbol 2diw{}
+I15:
+F->C.F,}			goto(F)=I28
+F->C.F,2diw{}
+G->C.Fe,2diw{
+F->.CF,}			goto(C)=I15
+F->.GF,}			goto(G)=I16
+F->.LH;,}			goto(L)=I17
+F->.WF,}			goto(W)=I18
+F->.2=E;,}			action(2)=I19
+F->.B,}			goto(B)=I20
+F->.CF,2diw{}
+F->.GF,2diw{}
+F->.LH;,2diw{}
+F->.WF,2diw{}
+F->.2=E;,2diw{}
+F->.B,2diw{}
+F->.CF,e
+F->.GF,e
+F->.LH;,e
+F->.WF,e
+F->.2=E;,e
+F->.B,e
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},}			action({)=I23
+B->.{DS},2diw{}
+B->.{DS},e
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+F->C.F,e
+I16:
+F->G.F,}			goto(F)=I29
+F->G.F,2diw{}
+F->G.F,e
+F->.CF,}			goto(C)=I15
+F->.GF,}			goto(G)=I16
+F->.LH;,}			goto(L)=I17
+F->.WF,}			goto(W)=I18
+F->.2=E;,}			action(2)=I19
+F->.B,}			goto(B)=I20
+F->.CF,2diw{}
+F->.GF,2diw{}
+F->.LH;,2diw{}
+F->.WF,2diw{}
+F->.2=E;,2diw{}
+F->.B,2diw{}
+F->.CF,e
+F->.GF,e
+F->.LH;,e
+F->.WF,e
+F->.2=E;,e
+F->.B,e
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},}			action({)=I23
+B->.{DS},2diw{}
+B->.{DS},e
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+I17:
+F->L.H;,}			goto(H)=I30
+F->L.H;,2diw{}
+F->L.H;,e
+H->.IJ,;			goto(I)=I31
+H->.J,;			goto(J)=I32
+I->.H5,!(-23
+J->.NM,;			goto(N)=I33
+J->.M,;			goto(M)=I34
+H->.IJ,5
+H->.J,5
+N->.J6,!(-23
+M->.Q,;			goto(Q)=I35
+J->.NM,5
+J->.M,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,;
+Q->.Q4R,;
+Q->.R,;			goto(R)=I36
+M->.Q,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,;
+R->.R8X,;
+R->.R>X,;
+R->.R9X,;
+R->.X,;			goto(X)=I37
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I18:
+F->W.F,}			goto(F)=I46
+F->W.F,2diw{}
+F->W.F,e
+F->.CF,}			goto(C)=I15
+F->.GF,}			goto(G)=I16
+F->.LH;,}			goto(L)=I17
+F->.WF,}			goto(W)=I18
+F->.2=E;,}			action(2)=I19
+F->.B,}			goto(B)=I20
+F->.CF,2diw{}
+F->.GF,2diw{}
+F->.LH;,2diw{}
+F->.WF,2diw{}
+F->.2=E;,2diw{}
+F->.B,2diw{}
+F->.CF,e
+F->.GF,e
+F->.LH;,e
+F->.WF,e
+F->.2=E;,e
+F->.B,e
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},}			action({)=I23
+B->.{DS},2diw{}
+B->.{DS},e
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+I19:
+F->2.=E;,}			action(=)=I47
+F->2.=E;,2diw{}
+F->2.=E;,e
+I20:
+F->B.,}			Use F->B to reduce for terminal symbol }
+F->B.,2diw{}			Use F->B to reduce for terminal symbol 2diw{}
+F->B.,e			Use F->B to reduce for terminal symbol e
+I21:
+C->i.H,2diw{			goto(H)=I48
+H->.IJ,2diw{			goto(I)=I49
+H->.J,2diw{			goto(J)=I50
+I->.H5,!(-23
+J->.NM,2diw{			goto(N)=I51
+J->.M,2diw{			goto(M)=I52
+H->.IJ,5
+H->.J,5
+N->.J6,!(-23
+M->.Q,2diw{			goto(Q)=I53
+J->.NM,5
+J->.M,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,2diw{
+Q->.Q4R,2diw{
+Q->.R,2diw{			goto(R)=I54
+M->.Q,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,2diw{
+R->.R8X,2diw{
+R->.R>X,2diw{
+R->.R9X,2diw{
+R->.X,2diw{			goto(X)=I55
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I22:
+L->Z.FZ,!(-23			goto(F)=I64
+W->Z.H,2diw{			goto(H)=I65
+F->.CF,dw			goto(C)=I66
+F->.GF,dw			goto(G)=I67
+F->.LH;,dw			goto(L)=I68
+F->.WF,dw			goto(W)=I69
+F->.2=E;,dw			action(2)=I70
+F->.B,dw			goto(B)=I71
+H->.IJ,2diw{			goto(I)=I49
+H->.J,2diw{			goto(J)=I50
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},dw			action({)=I72
+I->.H5,!(-23
+J->.NM,2diw{			goto(N)=I51
+J->.M,2diw{			goto(M)=I52
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+H->.IJ,5
+H->.J,5
+N->.J6,!(-23
+M->.Q,2diw{			goto(Q)=I53
+J->.NM,5
+J->.M,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,2diw{
+Q->.Q4R,2diw{
+Q->.R,2diw{			goto(R)=I54
+M->.Q,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,2diw{
+R->.R8X,2diw{
+R->.R>X,2diw{
+R->.R9X,2diw{
+R->.X,2diw{			goto(X)=I55
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{
+K->.3,2diw{			action(3)=I63
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I23:
+B->{.DS},}			goto(D)=I73
+B->{.DS},2diw{}
+B->{.DS},e
+D->.A;D,2diw{}			goto(A)=I5
+D->.@,2diw{}			Use D-> to reduce for terminal symbol 2diw{}
+A->.A,2,;
+A->.h2,;			action(h)=I6
+A->.z2,;			action(z)=I7
+A->.A,2,,
+A->.h2,,
+A->.z2,,
+I24:
+Z->w.,2diw{			Use Z->w to reduce for terminal symbol 2diw{
+Z->w.,!(-23			Use Z->w to reduce for terminal symbol !(-23
+I25:
+Z->d.,2diw{			Use Z->d to reduce for terminal symbol 2diw{
+Z->d.,!(-23			Use Z->d to reduce for terminal symbol !(-23
+I26:
+D->A;D.,2diw{}			Use D->A;D to reduce for terminal symbol 2diw{}
+I27:
+A->A,2.,;			Use A->A,2 to reduce for terminal symbol ;
+A->A,2.,,			Use A->A,2 to reduce for terminal symbol ,
+I28:
+F->CF.,}			Use F->CF to reduce for terminal symbol }
+F->CF.,2diw{}			Use F->CF to reduce for terminal symbol 2diw{}
+G->CF.e,2diw{			action(e)=I74
+F->CF.,e			Use F->CF to reduce for terminal symbol e
+I29:
+F->GF.,}			Use F->GF to reduce for terminal symbol }
+F->GF.,2diw{}			Use F->GF to reduce for terminal symbol 2diw{}
+F->GF.,e			Use F->GF to reduce for terminal symbol e
+I30:
+F->LH.;,}			action(;)=I75
+F->LH.;,2diw{}
+F->LH.;,e
+I->H.5,!(-23			action(5)=I76
+I31:
+H->I.J,;			goto(J)=I77
+H->I.J,5
+J->.NM,;			goto(N)=I33
+J->.M,;			goto(M)=I34
+J->.NM,5
+J->.M,5
+N->.J6,!(-23
+M->.Q,;			goto(Q)=I35
+M->.Q,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,;
+Q->.Q4R,;
+Q->.R,;			goto(R)=I36
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,;
+R->.R8X,;
+R->.R>X,;
+R->.R9X,;
+R->.X,;			goto(X)=I37
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,5
+V->.-V,5
+V->.K,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),5
+K->.2,5
+K->.3,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),6
+K->.2,6
+K->.3,6
+I32:
+H->J.,;			Use H->J to reduce for terminal symbol ;
+H->J.,5			Use H->J to reduce for terminal symbol 5
+N->J.6,!(-23			action(6)=I78
+I33:
+J->N.M,;			goto(M)=I79
+J->N.M,5
+J->N.M,6
+M->.Q,;			goto(Q)=I35
+M->.Q,5
+M->.Q,6
+Q->.Q7R,;
+Q->.Q4R,;
+Q->.R,;			goto(R)=I36
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,;
+R->.R8X,;
+R->.R>X,;
+R->.R9X,;
+R->.X,;			goto(X)=I37
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I34:
+J->M.,;			Use J->M to reduce for terminal symbol ;
+J->M.,5			Use J->M to reduce for terminal symbol 5
+J->M.,6			Use J->M to reduce for terminal symbol 6
+I35:
+M->Q.,;			Use M->Q to reduce for terminal symbol ;
+Q->Q.7R,;			action(7)=I80
+Q->Q.4R,;			action(4)=I81
+M->Q.,5			Use M->Q to reduce for terminal symbol 5
+M->Q.,6			Use M->Q to reduce for terminal symbol 6
+Q->Q.7R,7
+Q->Q.4R,7
+Q->Q.7R,4
+Q->Q.4R,4
+Q->Q.7R,5
+Q->Q.4R,5
+Q->Q.7R,6
+Q->Q.4R,6
+I36:
+Q->R.,;			Use Q->R to reduce for terminal symbol ;
+Q->R.,7			Use Q->R to reduce for terminal symbol 7
+Q->R.,4			Use Q->R to reduce for terminal symbol 4
+R->R.<X,;			action(<)=I82
+R->R.8X,;			action(8)=I83
+R->R.>X,;			action(>)=I84
+R->R.9X,;			action(9)=I85
+Q->R.,5			Use Q->R to reduce for terminal symbol 5
+Q->R.,6			Use Q->R to reduce for terminal symbol 6
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+I37:
+R->X.,;			Use R->X to reduce for terminal symbol ;
+R->X.,7			Use R->X to reduce for terminal symbol 7
+R->X.,4			Use R->X to reduce for terminal symbol 4
+R->X.,<			Use R->X to reduce for terminal symbol <
+R->X.,8			Use R->X to reduce for terminal symbol 8
+R->X.,>			Use R->X to reduce for terminal symbol >
+R->X.,9			Use R->X to reduce for terminal symbol 9
+X->X.+Y,;			action(+)=I86
+X->X.-Y,;			action(-)=I87
+R->X.,5			Use R->X to reduce for terminal symbol 5
+R->X.,6			Use R->X to reduce for terminal symbol 6
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+I38:
+X->Y.,;			Use X->Y to reduce for terminal symbol ;
+X->Y.,7			Use X->Y to reduce for terminal symbol 7
+X->Y.,4			Use X->Y to reduce for terminal symbol 4
+X->Y.,<			Use X->Y to reduce for terminal symbol <
+X->Y.,8			Use X->Y to reduce for terminal symbol 8
+X->Y.,>			Use X->Y to reduce for terminal symbol >
+X->Y.,9			Use X->Y to reduce for terminal symbol 9
+X->Y.,+			Use X->Y to reduce for terminal symbol +
+X->Y.,-			Use X->Y to reduce for terminal symbol -
+Y->Y.*V,;			action(*)=I88
+Y->Y./V,;			action(/)=I89
+X->Y.,5			Use X->Y to reduce for terminal symbol 5
+X->Y.,6			Use X->Y to reduce for terminal symbol 6
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+I39:
+Y->V.,;			Use Y->V to reduce for terminal symbol ;
+Y->V.,7			Use Y->V to reduce for terminal symbol 7
+Y->V.,4			Use Y->V to reduce for terminal symbol 4
+Y->V.,<			Use Y->V to reduce for terminal symbol <
+Y->V.,8			Use Y->V to reduce for terminal symbol 8
+Y->V.,>			Use Y->V to reduce for terminal symbol >
+Y->V.,9			Use Y->V to reduce for terminal symbol 9
+Y->V.,+			Use Y->V to reduce for terminal symbol +
+Y->V.,-			Use Y->V to reduce for terminal symbol -
+Y->V.,*			Use Y->V to reduce for terminal symbol *
+Y->V.,/			Use Y->V to reduce for terminal symbol /
+Y->V.,5			Use Y->V to reduce for terminal symbol 5
+Y->V.,6			Use Y->V to reduce for terminal symbol 6
+I40:
+V->!.V,;			goto(V)=I90
+V->!.V,7
+V->!.V,4
+V->!.V,<
+V->!.V,8
+V->!.V,>
+V->!.V,9
+V->!.V,+
+V->!.V,-
+V->!.V,*
+V->!.V,/
+V->!.V,5
+V->!.V,6
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I41:
+V->-.V,;			goto(V)=I91
+V->-.V,7
+V->-.V,4
+V->-.V,<
+V->-.V,8
+V->-.V,>
+V->-.V,9
+V->-.V,+
+V->-.V,-
+V->-.V,*
+V->-.V,/
+V->-.V,5
+V->-.V,6
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I42:
+V->K.,;			Use V->K to reduce for terminal symbol ;
+V->K.,7			Use V->K to reduce for terminal symbol 7
+V->K.,4			Use V->K to reduce for terminal symbol 4
+V->K.,<			Use V->K to reduce for terminal symbol <
+V->K.,8			Use V->K to reduce for terminal symbol 8
+V->K.,>			Use V->K to reduce for terminal symbol >
+V->K.,9			Use V->K to reduce for terminal symbol 9
+V->K.,+			Use V->K to reduce for terminal symbol +
+V->K.,-			Use V->K to reduce for terminal symbol -
+V->K.,*			Use V->K to reduce for terminal symbol *
+V->K.,/			Use V->K to reduce for terminal symbol /
+V->K.,5			Use V->K to reduce for terminal symbol 5
+V->K.,6			Use V->K to reduce for terminal symbol 6
+I43:
+K->(.H),;			goto(H)=I92
+K->(.H),7
+K->(.H),4
+K->(.H),<
+K->(.H),8
+K->(.H),>
+K->(.H),9
+K->(.H),+
+K->(.H),-
+K->(.H),*
+K->(.H),/
+K->(.H),5
+K->(.H),6
+H->.IJ,)			goto(I)=I93
+H->.J,)			goto(J)=I94
+I->.H5,!(-23
+J->.NM,)			goto(N)=I95
+J->.M,)			goto(M)=I96
+H->.IJ,5
+H->.J,5
+N->.J6,!(-23
+M->.Q,)			goto(Q)=I97
+J->.NM,5
+J->.M,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,)
+Q->.Q4R,)
+Q->.R,)			goto(R)=I98
+M->.Q,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,)
+R->.R8X,)
+R->.R>X,)
+R->.R9X,)
+R->.X,)			goto(X)=I99
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I44:
+K->2.,;			Use K->2 to reduce for terminal symbol ;
+K->2.,7			Use K->2 to reduce for terminal symbol 7
+K->2.,4			Use K->2 to reduce for terminal symbol 4
+K->2.,<			Use K->2 to reduce for terminal symbol <
+K->2.,8			Use K->2 to reduce for terminal symbol 8
+K->2.,>			Use K->2 to reduce for terminal symbol >
+K->2.,9			Use K->2 to reduce for terminal symbol 9
+K->2.,+			Use K->2 to reduce for terminal symbol +
+K->2.,-			Use K->2 to reduce for terminal symbol -
+K->2.,*			Use K->2 to reduce for terminal symbol *
+K->2.,/			Use K->2 to reduce for terminal symbol /
+K->2.,5			Use K->2 to reduce for terminal symbol 5
+K->2.,6			Use K->2 to reduce for terminal symbol 6
+I45:
+K->3.,;			Use K->3 to reduce for terminal symbol ;
+K->3.,7			Use K->3 to reduce for terminal symbol 7
+K->3.,4			Use K->3 to reduce for terminal symbol 4
+K->3.,<			Use K->3 to reduce for terminal symbol <
+K->3.,8			Use K->3 to reduce for terminal symbol 8
+K->3.,>			Use K->3 to reduce for terminal symbol >
+K->3.,9			Use K->3 to reduce for terminal symbol 9
+K->3.,+			Use K->3 to reduce for terminal symbol +
+K->3.,-			Use K->3 to reduce for terminal symbol -
+K->3.,*			Use K->3 to reduce for terminal symbol *
+K->3.,/			Use K->3 to reduce for terminal symbol /
+K->3.,5			Use K->3 to reduce for terminal symbol 5
+K->3.,6			Use K->3 to reduce for terminal symbol 6
+I46:
+F->WF.,}			Use F->WF to reduce for terminal symbol }
+F->WF.,2diw{}			Use F->WF to reduce for terminal symbol 2diw{}
+F->WF.,e			Use F->WF to reduce for terminal symbol e
+I47:
+F->2=.E;,}			goto(E)=I108
+F->2=.E;,2diw{}
+F->2=.E;,e
+E->.E+T,;
+E->.E-T,;
+E->.T,;			goto(T)=I109
+E->.E+T,+
+E->.E-T,+
+E->.T,+
+E->.E+T,-
+E->.E-T,-
+E->.T,-
+T->.T*U,;
+T->.T/U,;
+T->.U,;			goto(U)=I110
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,;			action(-)=I111
+U->.O,;			goto(O)=I112
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),;			action(()=I113
+O->.2,;			action(2)=I114
+O->.3,;			action(3)=I115
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I48:
+C->iH.,2diw{			Use C->iH to reduce for terminal symbol 2diw{
+I->H.5,!(-23			action(5)=I76
+I49:
+H->I.J,2diw{			goto(J)=I116
+H->I.J,5
+J->.NM,2diw{			goto(N)=I51
+J->.M,2diw{			goto(M)=I52
+J->.NM,5
+J->.M,5
+N->.J6,!(-23
+M->.Q,2diw{			goto(Q)=I53
+M->.Q,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,2diw{
+Q->.Q4R,2diw{
+Q->.R,2diw{			goto(R)=I54
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,2diw{
+R->.R8X,2diw{
+R->.R>X,2diw{
+R->.R9X,2diw{
+R->.X,2diw{			goto(X)=I55
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,5
+V->.-V,5
+V->.K,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),5
+K->.2,5
+K->.3,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),6
+K->.2,6
+K->.3,6
+I50:
+H->J.,2diw{			Use H->J to reduce for terminal symbol 2diw{
+H->J.,5			Use H->J to reduce for terminal symbol 5
+N->J.6,!(-23			action(6)=I78
+I51:
+J->N.M,2diw{			goto(M)=I117
+J->N.M,5
+J->N.M,6
+M->.Q,2diw{			goto(Q)=I53
+M->.Q,5
+M->.Q,6
+Q->.Q7R,2diw{
+Q->.Q4R,2diw{
+Q->.R,2diw{			goto(R)=I54
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,2diw{
+R->.R8X,2diw{
+R->.R>X,2diw{
+R->.R9X,2diw{
+R->.X,2diw{			goto(X)=I55
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I52:
+J->M.,2diw{			Use J->M to reduce for terminal symbol 2diw{
+J->M.,5			Use J->M to reduce for terminal symbol 5
+J->M.,6			Use J->M to reduce for terminal symbol 6
+I53:
+M->Q.,2diw{			Use M->Q to reduce for terminal symbol 2diw{
+Q->Q.7R,2diw{			action(7)=I118
+Q->Q.4R,2diw{			action(4)=I119
+M->Q.,5			Use M->Q to reduce for terminal symbol 5
+M->Q.,6			Use M->Q to reduce for terminal symbol 6
+Q->Q.7R,7
+Q->Q.4R,7
+Q->Q.7R,4
+Q->Q.4R,4
+Q->Q.7R,5
+Q->Q.4R,5
+Q->Q.7R,6
+Q->Q.4R,6
+I54:
+Q->R.,2diw{			Use Q->R to reduce for terminal symbol 2diw{
+Q->R.,7			Use Q->R to reduce for terminal symbol 7
+Q->R.,4			Use Q->R to reduce for terminal symbol 4
+R->R.<X,2diw{			action(<)=I120
+R->R.8X,2diw{			action(8)=I121
+R->R.>X,2diw{			action(>)=I122
+R->R.9X,2diw{			action(9)=I123
+Q->R.,5			Use Q->R to reduce for terminal symbol 5
+Q->R.,6			Use Q->R to reduce for terminal symbol 6
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+I55:
+R->X.,2diw{			Use R->X to reduce for terminal symbol 2diw{
+R->X.,7			Use R->X to reduce for terminal symbol 7
+R->X.,4			Use R->X to reduce for terminal symbol 4
+R->X.,<			Use R->X to reduce for terminal symbol <
+R->X.,8			Use R->X to reduce for terminal symbol 8
+R->X.,>			Use R->X to reduce for terminal symbol >
+R->X.,9			Use R->X to reduce for terminal symbol 9
+X->X.+Y,2diw{			action(+)=I124
+X->X.-Y,2diw{			action(-)=I125
+R->X.,5			Use R->X to reduce for terminal symbol 5
+R->X.,6			Use R->X to reduce for terminal symbol 6
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+I56:
+X->Y.,2diw{			Use X->Y to reduce for terminal symbol 2diw{
+X->Y.,7			Use X->Y to reduce for terminal symbol 7
+X->Y.,4			Use X->Y to reduce for terminal symbol 4
+X->Y.,<			Use X->Y to reduce for terminal symbol <
+X->Y.,8			Use X->Y to reduce for terminal symbol 8
+X->Y.,>			Use X->Y to reduce for terminal symbol >
+X->Y.,9			Use X->Y to reduce for terminal symbol 9
+X->Y.,+			Use X->Y to reduce for terminal symbol +
+X->Y.,-			Use X->Y to reduce for terminal symbol -
+Y->Y.*V,2diw{			action(*)=I126
+Y->Y./V,2diw{			action(/)=I127
+X->Y.,5			Use X->Y to reduce for terminal symbol 5
+X->Y.,6			Use X->Y to reduce for terminal symbol 6
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+I57:
+Y->V.,2diw{			Use Y->V to reduce for terminal symbol 2diw{
+Y->V.,7			Use Y->V to reduce for terminal symbol 7
+Y->V.,4			Use Y->V to reduce for terminal symbol 4
+Y->V.,<			Use Y->V to reduce for terminal symbol <
+Y->V.,8			Use Y->V to reduce for terminal symbol 8
+Y->V.,>			Use Y->V to reduce for terminal symbol >
+Y->V.,9			Use Y->V to reduce for terminal symbol 9
+Y->V.,+			Use Y->V to reduce for terminal symbol +
+Y->V.,-			Use Y->V to reduce for terminal symbol -
+Y->V.,*			Use Y->V to reduce for terminal symbol *
+Y->V.,/			Use Y->V to reduce for terminal symbol /
+Y->V.,5			Use Y->V to reduce for terminal symbol 5
+Y->V.,6			Use Y->V to reduce for terminal symbol 6
+I58:
+V->!.V,2diw{			goto(V)=I128
+V->!.V,7
+V->!.V,4
+V->!.V,<
+V->!.V,8
+V->!.V,>
+V->!.V,9
+V->!.V,+
+V->!.V,-
+V->!.V,*
+V->!.V,/
+V->!.V,5
+V->!.V,6
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I59:
+V->-.V,2diw{			goto(V)=I129
+V->-.V,7
+V->-.V,4
+V->-.V,<
+V->-.V,8
+V->-.V,>
+V->-.V,9
+V->-.V,+
+V->-.V,-
+V->-.V,*
+V->-.V,/
+V->-.V,5
+V->-.V,6
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I60:
+V->K.,2diw{			Use V->K to reduce for terminal symbol 2diw{
+V->K.,7			Use V->K to reduce for terminal symbol 7
+V->K.,4			Use V->K to reduce for terminal symbol 4
+V->K.,<			Use V->K to reduce for terminal symbol <
+V->K.,8			Use V->K to reduce for terminal symbol 8
+V->K.,>			Use V->K to reduce for terminal symbol >
+V->K.,9			Use V->K to reduce for terminal symbol 9
+V->K.,+			Use V->K to reduce for terminal symbol +
+V->K.,-			Use V->K to reduce for terminal symbol -
+V->K.,*			Use V->K to reduce for terminal symbol *
+V->K.,/			Use V->K to reduce for terminal symbol /
+V->K.,5			Use V->K to reduce for terminal symbol 5
+V->K.,6			Use V->K to reduce for terminal symbol 6
+I61:
+K->(.H),2diw{			goto(H)=I130
+K->(.H),7
+K->(.H),4
+K->(.H),<
+K->(.H),8
+K->(.H),>
+K->(.H),9
+K->(.H),+
+K->(.H),-
+K->(.H),*
+K->(.H),/
+K->(.H),5
+K->(.H),6
+H->.IJ,)			goto(I)=I93
+H->.J,)			goto(J)=I94
+I->.H5,!(-23
+J->.NM,)			goto(N)=I95
+J->.M,)			goto(M)=I96
+H->.IJ,5
+H->.J,5
+N->.J6,!(-23
+M->.Q,)			goto(Q)=I97
+J->.NM,5
+J->.M,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,)
+Q->.Q4R,)
+Q->.R,)			goto(R)=I98
+M->.Q,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,)
+R->.R8X,)
+R->.R>X,)
+R->.R9X,)
+R->.X,)			goto(X)=I99
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I62:
+K->2.,2diw{			Use K->2 to reduce for terminal symbol 2diw{
+K->2.,7			Use K->2 to reduce for terminal symbol 7
+K->2.,4			Use K->2 to reduce for terminal symbol 4
+K->2.,<			Use K->2 to reduce for terminal symbol <
+K->2.,8			Use K->2 to reduce for terminal symbol 8
+K->2.,>			Use K->2 to reduce for terminal symbol >
+K->2.,9			Use K->2 to reduce for terminal symbol 9
+K->2.,+			Use K->2 to reduce for terminal symbol +
+K->2.,-			Use K->2 to reduce for terminal symbol -
+K->2.,*			Use K->2 to reduce for terminal symbol *
+K->2.,/			Use K->2 to reduce for terminal symbol /
+K->2.,5			Use K->2 to reduce for terminal symbol 5
+K->2.,6			Use K->2 to reduce for terminal symbol 6
+I63:
+K->3.,2diw{			Use K->3 to reduce for terminal symbol 2diw{
+K->3.,7			Use K->3 to reduce for terminal symbol 7
+K->3.,4			Use K->3 to reduce for terminal symbol 4
+K->3.,<			Use K->3 to reduce for terminal symbol <
+K->3.,8			Use K->3 to reduce for terminal symbol 8
+K->3.,>			Use K->3 to reduce for terminal symbol >
+K->3.,9			Use K->3 to reduce for terminal symbol 9
+K->3.,+			Use K->3 to reduce for terminal symbol +
+K->3.,-			Use K->3 to reduce for terminal symbol -
+K->3.,*			Use K->3 to reduce for terminal symbol *
+K->3.,/			Use K->3 to reduce for terminal symbol /
+K->3.,5			Use K->3 to reduce for terminal symbol 5
+K->3.,6			Use K->3 to reduce for terminal symbol 6
+I64:
+L->ZF.Z,!(-23			goto(Z)=I131
+Z->.w,!(-23			action(w)=I132
+Z->.d,!(-23			action(d)=I133
+I65:
+W->ZH.,2diw{			Use W->ZH to reduce for terminal symbol 2diw{
+I->H.5,!(-23			action(5)=I76
+I66:
+F->C.F,dw			goto(F)=I134
+G->C.Fe,2diw{
+F->.CF,dw			goto(C)=I66
+F->.GF,dw			goto(G)=I67
+F->.LH;,dw			goto(L)=I68
+F->.WF,dw			goto(W)=I69
+F->.2=E;,dw			action(2)=I70
+F->.B,dw			goto(B)=I71
+F->.CF,e
+F->.GF,e
+F->.LH;,e
+F->.WF,e
+F->.2=E;,e
+F->.B,e
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},dw			action({)=I72
+B->.{DS},e
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+F->C.F,e
+I67:
+F->G.F,dw			goto(F)=I135
+F->G.F,e
+F->.CF,dw			goto(C)=I66
+F->.GF,dw			goto(G)=I67
+F->.LH;,dw			goto(L)=I68
+F->.WF,dw			goto(W)=I69
+F->.2=E;,dw			action(2)=I70
+F->.B,dw			goto(B)=I71
+F->.CF,e
+F->.GF,e
+F->.LH;,e
+F->.WF,e
+F->.2=E;,e
+F->.B,e
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},dw			action({)=I72
+B->.{DS},e
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+I68:
+F->L.H;,dw			goto(H)=I136
+F->L.H;,e
+H->.IJ,;			goto(I)=I31
+H->.J,;			goto(J)=I32
+I->.H5,!(-23
+J->.NM,;			goto(N)=I33
+J->.M,;			goto(M)=I34
+H->.IJ,5
+H->.J,5
+N->.J6,!(-23
+M->.Q,;			goto(Q)=I35
+J->.NM,5
+J->.M,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,;
+Q->.Q4R,;
+Q->.R,;			goto(R)=I36
+M->.Q,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,;
+R->.R8X,;
+R->.R>X,;
+R->.R9X,;
+R->.X,;			goto(X)=I37
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I69:
+F->W.F,dw			goto(F)=I137
+F->W.F,e
+F->.CF,dw			goto(C)=I66
+F->.GF,dw			goto(G)=I67
+F->.LH;,dw			goto(L)=I68
+F->.WF,dw			goto(W)=I69
+F->.2=E;,dw			action(2)=I70
+F->.B,dw			goto(B)=I71
+F->.CF,e
+F->.GF,e
+F->.LH;,e
+F->.WF,e
+F->.2=E;,e
+F->.B,e
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},dw			action({)=I72
+B->.{DS},e
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+I70:
+F->2.=E;,dw			action(=)=I138
+K->2.,2diw{			Use K->2 to reduce for terminal symbol 2diw{
+K->2.,7			Use K->2 to reduce for terminal symbol 7
+K->2.,4			Use K->2 to reduce for terminal symbol 4
+K->2.,<			Use K->2 to reduce for terminal symbol <
+K->2.,8			Use K->2 to reduce for terminal symbol 8
+K->2.,>			Use K->2 to reduce for terminal symbol >
+K->2.,9			Use K->2 to reduce for terminal symbol 9
+K->2.,+			Use K->2 to reduce for terminal symbol +
+K->2.,-			Use K->2 to reduce for terminal symbol -
+K->2.,*			Use K->2 to reduce for terminal symbol *
+K->2.,/			Use K->2 to reduce for terminal symbol /
+K->2.,5			Use K->2 to reduce for terminal symbol 5
+K->2.,6			Use K->2 to reduce for terminal symbol 6
+F->2.=E;,e
+I71:
+F->B.,dw			Use F->B to reduce for terminal symbol dw
+F->B.,e			Use F->B to reduce for terminal symbol e
+I72:
+B->{.DS},dw			goto(D)=I139
+B->{.DS},e
+D->.A;D,2diw{}			goto(A)=I5
+D->.@,2diw{}			Use D-> to reduce for terminal symbol 2diw{}
+A->.A,2,;
+A->.h2,;			action(h)=I6
+A->.z2,;			action(z)=I7
+A->.A,2,,
+A->.h2,,
+A->.z2,,
+I73:
+B->{D.S},}			goto(S)=I140
+B->{D.S},2diw{}
+B->{D.S},e
+S->.SF,}
+S->.@,}			Use S-> to reduce for terminal symbol }
+S->.SF,2diw{}
+S->.@,2diw{}			Use S-> to reduce for terminal symbol 2diw{}
+I74:
+G->CFe.,2diw{			Use G->CFe to reduce for terminal symbol 2diw{
+I75:
+F->LH;.,}			Use F->LH; to reduce for terminal symbol }
+F->LH;.,2diw{}			Use F->LH; to reduce for terminal symbol 2diw{}
+F->LH;.,e			Use F->LH; to reduce for terminal symbol e
+I76:
+I->H5.,!(-23			Use I->H5 to reduce for terminal symbol !(-23
+I77:
+H->IJ.,;			Use H->IJ to reduce for terminal symbol ;
+H->IJ.,5			Use H->IJ to reduce for terminal symbol 5
+N->J.6,!(-23			action(6)=I78
+I78:
+N->J6.,!(-23			Use N->J6 to reduce for terminal symbol !(-23
+I79:
+J->NM.,;			Use J->NM to reduce for terminal symbol ;
+J->NM.,5			Use J->NM to reduce for terminal symbol 5
+J->NM.,6			Use J->NM to reduce for terminal symbol 6
+I80:
+Q->Q7.R,;			goto(R)=I141
+Q->Q7.R,7
+Q->Q7.R,4
+Q->Q7.R,5
+Q->Q7.R,6
+R->.R<X,;
+R->.R8X,;
+R->.R>X,;
+R->.R9X,;
+R->.X,;			goto(X)=I37
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I81:
+Q->Q4.R,;			goto(R)=I142
+Q->Q4.R,7
+Q->Q4.R,4
+Q->Q4.R,5
+Q->Q4.R,6
+R->.R<X,;
+R->.R8X,;
+R->.R>X,;
+R->.R9X,;
+R->.X,;			goto(X)=I37
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I82:
+R->R<.X,;			goto(X)=I143
+R->R<.X,7
+R->R<.X,4
+R->R<.X,<
+R->R<.X,8
+R->R<.X,>
+R->R<.X,9
+R->R<.X,5
+R->R<.X,6
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I83:
+R->R8.X,;			goto(X)=I144
+R->R8.X,7
+R->R8.X,4
+R->R8.X,<
+R->R8.X,8
+R->R8.X,>
+R->R8.X,9
+R->R8.X,5
+R->R8.X,6
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I84:
+R->R>.X,;			goto(X)=I145
+R->R>.X,7
+R->R>.X,4
+R->R>.X,<
+R->R>.X,8
+R->R>.X,>
+R->R>.X,9
+R->R>.X,5
+R->R>.X,6
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I85:
+R->R9.X,;			goto(X)=I146
+R->R9.X,7
+R->R9.X,4
+R->R9.X,<
+R->R9.X,8
+R->R9.X,>
+R->R9.X,9
+R->R9.X,5
+R->R9.X,6
+X->.X+Y,;
+X->.X-Y,;
+X->.Y,;			goto(Y)=I38
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I86:
+X->X+.Y,;			goto(Y)=I147
+X->X+.Y,7
+X->X+.Y,4
+X->X+.Y,<
+X->X+.Y,8
+X->X+.Y,>
+X->X+.Y,9
+X->X+.Y,+
+X->X+.Y,-
+X->X+.Y,5
+X->X+.Y,6
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I87:
+X->X-.Y,;			goto(Y)=I148
+X->X-.Y,7
+X->X-.Y,4
+X->X-.Y,<
+X->X-.Y,8
+X->X-.Y,>
+X->X-.Y,9
+X->X-.Y,+
+X->X-.Y,-
+X->X-.Y,5
+X->X-.Y,6
+Y->.Y*V,;
+Y->.Y/V,;
+Y->.V,;			goto(V)=I39
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I88:
+Y->Y*.V,;			goto(V)=I149
+Y->Y*.V,7
+Y->Y*.V,4
+Y->Y*.V,<
+Y->Y*.V,8
+Y->Y*.V,>
+Y->Y*.V,9
+Y->Y*.V,+
+Y->Y*.V,-
+Y->Y*.V,*
+Y->Y*.V,/
+Y->Y*.V,5
+Y->Y*.V,6
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I89:
+Y->Y/.V,;			goto(V)=I150
+Y->Y/.V,7
+Y->Y/.V,4
+Y->Y/.V,<
+Y->Y/.V,8
+Y->Y/.V,>
+Y->Y/.V,9
+Y->Y/.V,+
+Y->Y/.V,-
+Y->Y/.V,*
+Y->Y/.V,/
+Y->Y/.V,5
+Y->Y/.V,6
+V->.!V,;			action(!)=I40
+V->.-V,;			action(-)=I41
+V->.K,;			goto(K)=I42
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),;			action(()=I43
+K->.2,;			action(2)=I44
+K->.3,;			action(3)=I45
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I90:
+V->!V.,;			Use V->!V to reduce for terminal symbol ;
+V->!V.,7			Use V->!V to reduce for terminal symbol 7
+V->!V.,4			Use V->!V to reduce for terminal symbol 4
+V->!V.,<			Use V->!V to reduce for terminal symbol <
+V->!V.,8			Use V->!V to reduce for terminal symbol 8
+V->!V.,>			Use V->!V to reduce for terminal symbol >
+V->!V.,9			Use V->!V to reduce for terminal symbol 9
+V->!V.,+			Use V->!V to reduce for terminal symbol +
+V->!V.,-			Use V->!V to reduce for terminal symbol -
+V->!V.,*			Use V->!V to reduce for terminal symbol *
+V->!V.,/			Use V->!V to reduce for terminal symbol /
+V->!V.,5			Use V->!V to reduce for terminal symbol 5
+V->!V.,6			Use V->!V to reduce for terminal symbol 6
+I91:
+V->-V.,;			Use V->-V to reduce for terminal symbol ;
+V->-V.,7			Use V->-V to reduce for terminal symbol 7
+V->-V.,4			Use V->-V to reduce for terminal symbol 4
+V->-V.,<			Use V->-V to reduce for terminal symbol <
+V->-V.,8			Use V->-V to reduce for terminal symbol 8
+V->-V.,>			Use V->-V to reduce for terminal symbol >
+V->-V.,9			Use V->-V to reduce for terminal symbol 9
+V->-V.,+			Use V->-V to reduce for terminal symbol +
+V->-V.,-			Use V->-V to reduce for terminal symbol -
+V->-V.,*			Use V->-V to reduce for terminal symbol *
+V->-V.,/			Use V->-V to reduce for terminal symbol /
+V->-V.,5			Use V->-V to reduce for terminal symbol 5
+V->-V.,6			Use V->-V to reduce for terminal symbol 6
+I92:
+K->(H.),;			action())=I151
+K->(H.),7
+K->(H.),4
+K->(H.),<
+K->(H.),8
+K->(H.),>
+K->(H.),9
+K->(H.),+
+K->(H.),-
+K->(H.),*
+K->(H.),/
+K->(H.),5
+K->(H.),6
+I->H.5,!(-23			action(5)=I76
+I93:
+H->I.J,)			goto(J)=I152
+H->I.J,5
+J->.NM,)			goto(N)=I95
+J->.M,)			goto(M)=I96
+J->.NM,5
+J->.M,5
+N->.J6,!(-23
+M->.Q,)			goto(Q)=I97
+M->.Q,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,)
+Q->.Q4R,)
+Q->.R,)			goto(R)=I98
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,)
+R->.R8X,)
+R->.R>X,)
+R->.R9X,)
+R->.X,)			goto(X)=I99
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,5
+V->.-V,5
+V->.K,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),5
+K->.2,5
+K->.3,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),6
+K->.2,6
+K->.3,6
+I94:
+H->J.,)			Use H->J to reduce for terminal symbol )
+H->J.,5			Use H->J to reduce for terminal symbol 5
+N->J.6,!(-23			action(6)=I78
+I95:
+J->N.M,)			goto(M)=I153
+J->N.M,5
+J->N.M,6
+M->.Q,)			goto(Q)=I97
+M->.Q,5
+M->.Q,6
+Q->.Q7R,)
+Q->.Q4R,)
+Q->.R,)			goto(R)=I98
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,)
+R->.R8X,)
+R->.R>X,)
+R->.R9X,)
+R->.X,)			goto(X)=I99
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I96:
+J->M.,)			Use J->M to reduce for terminal symbol )
+J->M.,5			Use J->M to reduce for terminal symbol 5
+J->M.,6			Use J->M to reduce for terminal symbol 6
+I97:
+M->Q.,)			Use M->Q to reduce for terminal symbol )
+Q->Q.7R,)			action(7)=I154
+Q->Q.4R,)			action(4)=I155
+M->Q.,5			Use M->Q to reduce for terminal symbol 5
+M->Q.,6			Use M->Q to reduce for terminal symbol 6
+Q->Q.7R,7
+Q->Q.4R,7
+Q->Q.7R,4
+Q->Q.4R,4
+Q->Q.7R,5
+Q->Q.4R,5
+Q->Q.7R,6
+Q->Q.4R,6
+I98:
+Q->R.,)			Use Q->R to reduce for terminal symbol )
+Q->R.,7			Use Q->R to reduce for terminal symbol 7
+Q->R.,4			Use Q->R to reduce for terminal symbol 4
+R->R.<X,)			action(<)=I156
+R->R.8X,)			action(8)=I157
+R->R.>X,)			action(>)=I158
+R->R.9X,)			action(9)=I159
+Q->R.,5			Use Q->R to reduce for terminal symbol 5
+Q->R.,6			Use Q->R to reduce for terminal symbol 6
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+I99:
+R->X.,)			Use R->X to reduce for terminal symbol )
+R->X.,7			Use R->X to reduce for terminal symbol 7
+R->X.,4			Use R->X to reduce for terminal symbol 4
+R->X.,<			Use R->X to reduce for terminal symbol <
+R->X.,8			Use R->X to reduce for terminal symbol 8
+R->X.,>			Use R->X to reduce for terminal symbol >
+R->X.,9			Use R->X to reduce for terminal symbol 9
+X->X.+Y,)			action(+)=I160
+X->X.-Y,)			action(-)=I161
+R->X.,5			Use R->X to reduce for terminal symbol 5
+R->X.,6			Use R->X to reduce for terminal symbol 6
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+I100:
+X->Y.,)			Use X->Y to reduce for terminal symbol )
+X->Y.,7			Use X->Y to reduce for terminal symbol 7
+X->Y.,4			Use X->Y to reduce for terminal symbol 4
+X->Y.,<			Use X->Y to reduce for terminal symbol <
+X->Y.,8			Use X->Y to reduce for terminal symbol 8
+X->Y.,>			Use X->Y to reduce for terminal symbol >
+X->Y.,9			Use X->Y to reduce for terminal symbol 9
+X->Y.,+			Use X->Y to reduce for terminal symbol +
+X->Y.,-			Use X->Y to reduce for terminal symbol -
+Y->Y.*V,)			action(*)=I162
+Y->Y./V,)			action(/)=I163
+X->Y.,5			Use X->Y to reduce for terminal symbol 5
+X->Y.,6			Use X->Y to reduce for terminal symbol 6
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+I101:
+Y->V.,)			Use Y->V to reduce for terminal symbol )
+Y->V.,7			Use Y->V to reduce for terminal symbol 7
+Y->V.,4			Use Y->V to reduce for terminal symbol 4
+Y->V.,<			Use Y->V to reduce for terminal symbol <
+Y->V.,8			Use Y->V to reduce for terminal symbol 8
+Y->V.,>			Use Y->V to reduce for terminal symbol >
+Y->V.,9			Use Y->V to reduce for terminal symbol 9
+Y->V.,+			Use Y->V to reduce for terminal symbol +
+Y->V.,-			Use Y->V to reduce for terminal symbol -
+Y->V.,*			Use Y->V to reduce for terminal symbol *
+Y->V.,/			Use Y->V to reduce for terminal symbol /
+Y->V.,5			Use Y->V to reduce for terminal symbol 5
+Y->V.,6			Use Y->V to reduce for terminal symbol 6
+I102:
+V->!.V,)			goto(V)=I164
+V->!.V,7
+V->!.V,4
+V->!.V,<
+V->!.V,8
+V->!.V,>
+V->!.V,9
+V->!.V,+
+V->!.V,-
+V->!.V,*
+V->!.V,/
+V->!.V,5
+V->!.V,6
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I103:
+V->-.V,)			goto(V)=I165
+V->-.V,7
+V->-.V,4
+V->-.V,<
+V->-.V,8
+V->-.V,>
+V->-.V,9
+V->-.V,+
+V->-.V,-
+V->-.V,*
+V->-.V,/
+V->-.V,5
+V->-.V,6
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I104:
+V->K.,)			Use V->K to reduce for terminal symbol )
+V->K.,7			Use V->K to reduce for terminal symbol 7
+V->K.,4			Use V->K to reduce for terminal symbol 4
+V->K.,<			Use V->K to reduce for terminal symbol <
+V->K.,8			Use V->K to reduce for terminal symbol 8
+V->K.,>			Use V->K to reduce for terminal symbol >
+V->K.,9			Use V->K to reduce for terminal symbol 9
+V->K.,+			Use V->K to reduce for terminal symbol +
+V->K.,-			Use V->K to reduce for terminal symbol -
+V->K.,*			Use V->K to reduce for terminal symbol *
+V->K.,/			Use V->K to reduce for terminal symbol /
+V->K.,5			Use V->K to reduce for terminal symbol 5
+V->K.,6			Use V->K to reduce for terminal symbol 6
+I105:
+K->(.H),)			goto(H)=I166
+K->(.H),7
+K->(.H),4
+K->(.H),<
+K->(.H),8
+K->(.H),>
+K->(.H),9
+K->(.H),+
+K->(.H),-
+K->(.H),*
+K->(.H),/
+K->(.H),5
+K->(.H),6
+H->.IJ,)			goto(I)=I93
+H->.J,)			goto(J)=I94
+I->.H5,!(-23
+J->.NM,)			goto(N)=I95
+J->.M,)			goto(M)=I96
+H->.IJ,5
+H->.J,5
+N->.J6,!(-23
+M->.Q,)			goto(Q)=I97
+J->.NM,5
+J->.M,5
+J->.NM,6
+J->.M,6
+Q->.Q7R,)
+Q->.Q4R,)
+Q->.R,)			goto(R)=I98
+M->.Q,5
+M->.Q,6
+Q->.Q7R,7
+Q->.Q4R,7
+Q->.R,7
+Q->.Q7R,4
+Q->.Q4R,4
+Q->.R,4
+R->.R<X,)
+R->.R8X,)
+R->.R>X,)
+R->.R9X,)
+R->.X,)			goto(X)=I99
+Q->.Q7R,5
+Q->.Q4R,5
+Q->.R,5
+Q->.Q7R,6
+Q->.Q4R,6
+Q->.R,6
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I106:
+K->2.,)			Use K->2 to reduce for terminal symbol )
+K->2.,7			Use K->2 to reduce for terminal symbol 7
+K->2.,4			Use K->2 to reduce for terminal symbol 4
+K->2.,<			Use K->2 to reduce for terminal symbol <
+K->2.,8			Use K->2 to reduce for terminal symbol 8
+K->2.,>			Use K->2 to reduce for terminal symbol >
+K->2.,9			Use K->2 to reduce for terminal symbol 9
+K->2.,+			Use K->2 to reduce for terminal symbol +
+K->2.,-			Use K->2 to reduce for terminal symbol -
+K->2.,*			Use K->2 to reduce for terminal symbol *
+K->2.,/			Use K->2 to reduce for terminal symbol /
+K->2.,5			Use K->2 to reduce for terminal symbol 5
+K->2.,6			Use K->2 to reduce for terminal symbol 6
+I107:
+K->3.,)			Use K->3 to reduce for terminal symbol )
+K->3.,7			Use K->3 to reduce for terminal symbol 7
+K->3.,4			Use K->3 to reduce for terminal symbol 4
+K->3.,<			Use K->3 to reduce for terminal symbol <
+K->3.,8			Use K->3 to reduce for terminal symbol 8
+K->3.,>			Use K->3 to reduce for terminal symbol >
+K->3.,9			Use K->3 to reduce for terminal symbol 9
+K->3.,+			Use K->3 to reduce for terminal symbol +
+K->3.,-			Use K->3 to reduce for terminal symbol -
+K->3.,*			Use K->3 to reduce for terminal symbol *
+K->3.,/			Use K->3 to reduce for terminal symbol /
+K->3.,5			Use K->3 to reduce for terminal symbol 5
+K->3.,6			Use K->3 to reduce for terminal symbol 6
+I108:
+F->2=E.;,}			action(;)=I167
+F->2=E.;,2diw{}
+F->2=E.;,e
+E->E.+T,;			action(+)=I168
+E->E.-T,;			action(-)=I169
+E->E.+T,+
+E->E.-T,+
+E->E.+T,-
+E->E.-T,-
+I109:
+E->T.,;			Use E->T to reduce for terminal symbol ;
+E->T.,+			Use E->T to reduce for terminal symbol +
+E->T.,-			Use E->T to reduce for terminal symbol -
+T->T.*U,;			action(*)=I170
+T->T./U,;			action(/)=I171
+T->T.*U,+
+T->T./U,+
+T->T.*U,-
+T->T./U,-
+T->T.*U,*
+T->T./U,*
+T->T.*U,/
+T->T./U,/
+I110:
+T->U.,;			Use T->U to reduce for terminal symbol ;
+T->U.,+			Use T->U to reduce for terminal symbol +
+T->U.,-			Use T->U to reduce for terminal symbol -
+T->U.,*			Use T->U to reduce for terminal symbol *
+T->U.,/			Use T->U to reduce for terminal symbol /
+I111:
+U->-.U,;			goto(U)=I172
+U->-.U,+
+U->-.U,-
+U->-.U,*
+U->-.U,/
+U->.-U,;			action(-)=I111
+U->.O,;			goto(O)=I112
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),;			action(()=I113
+O->.2,;			action(2)=I114
+O->.3,;			action(3)=I115
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I112:
+U->O.,;			Use U->O to reduce for terminal symbol ;
+U->O.,+			Use U->O to reduce for terminal symbol +
+U->O.,-			Use U->O to reduce for terminal symbol -
+U->O.,*			Use U->O to reduce for terminal symbol *
+U->O.,/			Use U->O to reduce for terminal symbol /
+I113:
+O->(.E),;			goto(E)=I173
+O->(.E),+
+O->(.E),-
+O->(.E),*
+O->(.E),/
+E->.E+T,)
+E->.E-T,)
+E->.T,)			goto(T)=I174
+E->.E+T,+
+E->.E-T,+
+E->.T,+
+E->.E+T,-
+E->.E-T,-
+E->.T,-
+T->.T*U,)
+T->.T/U,)
+T->.U,)			goto(U)=I175
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,)			action(-)=I176
+U->.O,)			goto(O)=I177
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),)			action(()=I178
+O->.2,)			action(2)=I179
+O->.3,)			action(3)=I180
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I114:
+O->2.,;			Use O->2 to reduce for terminal symbol ;
+O->2.,+			Use O->2 to reduce for terminal symbol +
+O->2.,-			Use O->2 to reduce for terminal symbol -
+O->2.,*			Use O->2 to reduce for terminal symbol *
+O->2.,/			Use O->2 to reduce for terminal symbol /
+I115:
+O->3.,;			Use O->3 to reduce for terminal symbol ;
+O->3.,+			Use O->3 to reduce for terminal symbol +
+O->3.,-			Use O->3 to reduce for terminal symbol -
+O->3.,*			Use O->3 to reduce for terminal symbol *
+O->3.,/			Use O->3 to reduce for terminal symbol /
+I116:
+H->IJ.,2diw{			Use H->IJ to reduce for terminal symbol 2diw{
+H->IJ.,5			Use H->IJ to reduce for terminal symbol 5
+N->J.6,!(-23			action(6)=I78
+I117:
+J->NM.,2diw{			Use J->NM to reduce for terminal symbol 2diw{
+J->NM.,5			Use J->NM to reduce for terminal symbol 5
+J->NM.,6			Use J->NM to reduce for terminal symbol 6
+I118:
+Q->Q7.R,2diw{			goto(R)=I181
+Q->Q7.R,7
+Q->Q7.R,4
+Q->Q7.R,5
+Q->Q7.R,6
+R->.R<X,2diw{
+R->.R8X,2diw{
+R->.R>X,2diw{
+R->.R9X,2diw{
+R->.X,2diw{			goto(X)=I55
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I119:
+Q->Q4.R,2diw{			goto(R)=I182
+Q->Q4.R,7
+Q->Q4.R,4
+Q->Q4.R,5
+Q->Q4.R,6
+R->.R<X,2diw{
+R->.R8X,2diw{
+R->.R>X,2diw{
+R->.R9X,2diw{
+R->.X,2diw{			goto(X)=I55
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I120:
+R->R<.X,2diw{			goto(X)=I183
+R->R<.X,7
+R->R<.X,4
+R->R<.X,<
+R->R<.X,8
+R->R<.X,>
+R->R<.X,9
+R->R<.X,5
+R->R<.X,6
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I121:
+R->R8.X,2diw{			goto(X)=I184
+R->R8.X,7
+R->R8.X,4
+R->R8.X,<
+R->R8.X,8
+R->R8.X,>
+R->R8.X,9
+R->R8.X,5
+R->R8.X,6
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I122:
+R->R>.X,2diw{			goto(X)=I185
+R->R>.X,7
+R->R>.X,4
+R->R>.X,<
+R->R>.X,8
+R->R>.X,>
+R->R>.X,9
+R->R>.X,5
+R->R>.X,6
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I123:
+R->R9.X,2diw{			goto(X)=I186
+R->R9.X,7
+R->R9.X,4
+R->R9.X,<
+R->R9.X,8
+R->R9.X,>
+R->R9.X,9
+R->R9.X,5
+R->R9.X,6
+X->.X+Y,2diw{
+X->.X-Y,2diw{
+X->.Y,2diw{			goto(Y)=I56
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I124:
+X->X+.Y,2diw{			goto(Y)=I187
+X->X+.Y,7
+X->X+.Y,4
+X->X+.Y,<
+X->X+.Y,8
+X->X+.Y,>
+X->X+.Y,9
+X->X+.Y,+
+X->X+.Y,-
+X->X+.Y,5
+X->X+.Y,6
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I125:
+X->X-.Y,2diw{			goto(Y)=I188
+X->X-.Y,7
+X->X-.Y,4
+X->X-.Y,<
+X->X-.Y,8
+X->X-.Y,>
+X->X-.Y,9
+X->X-.Y,+
+X->X-.Y,-
+X->X-.Y,5
+X->X-.Y,6
+Y->.Y*V,2diw{
+Y->.Y/V,2diw{
+Y->.V,2diw{			goto(V)=I57
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I126:
+Y->Y*.V,2diw{			goto(V)=I189
+Y->Y*.V,7
+Y->Y*.V,4
+Y->Y*.V,<
+Y->Y*.V,8
+Y->Y*.V,>
+Y->Y*.V,9
+Y->Y*.V,+
+Y->Y*.V,-
+Y->Y*.V,*
+Y->Y*.V,/
+Y->Y*.V,5
+Y->Y*.V,6
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I127:
+Y->Y/.V,2diw{			goto(V)=I190
+Y->Y/.V,7
+Y->Y/.V,4
+Y->Y/.V,<
+Y->Y/.V,8
+Y->Y/.V,>
+Y->Y/.V,9
+Y->Y/.V,+
+Y->Y/.V,-
+Y->Y/.V,*
+Y->Y/.V,/
+Y->Y/.V,5
+Y->Y/.V,6
+V->.!V,2diw{			action(!)=I58
+V->.-V,2diw{			action(-)=I59
+V->.K,2diw{			goto(K)=I60
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),2diw{			action(()=I61
+K->.2,2diw{			action(2)=I62
+K->.3,2diw{			action(3)=I63
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I128:
+V->!V.,2diw{			Use V->!V to reduce for terminal symbol 2diw{
+V->!V.,7			Use V->!V to reduce for terminal symbol 7
+V->!V.,4			Use V->!V to reduce for terminal symbol 4
+V->!V.,<			Use V->!V to reduce for terminal symbol <
+V->!V.,8			Use V->!V to reduce for terminal symbol 8
+V->!V.,>			Use V->!V to reduce for terminal symbol >
+V->!V.,9			Use V->!V to reduce for terminal symbol 9
+V->!V.,+			Use V->!V to reduce for terminal symbol +
+V->!V.,-			Use V->!V to reduce for terminal symbol -
+V->!V.,*			Use V->!V to reduce for terminal symbol *
+V->!V.,/			Use V->!V to reduce for terminal symbol /
+V->!V.,5			Use V->!V to reduce for terminal symbol 5
+V->!V.,6			Use V->!V to reduce for terminal symbol 6
+I129:
+V->-V.,2diw{			Use V->-V to reduce for terminal symbol 2diw{
+V->-V.,7			Use V->-V to reduce for terminal symbol 7
+V->-V.,4			Use V->-V to reduce for terminal symbol 4
+V->-V.,<			Use V->-V to reduce for terminal symbol <
+V->-V.,8			Use V->-V to reduce for terminal symbol 8
+V->-V.,>			Use V->-V to reduce for terminal symbol >
+V->-V.,9			Use V->-V to reduce for terminal symbol 9
+V->-V.,+			Use V->-V to reduce for terminal symbol +
+V->-V.,-			Use V->-V to reduce for terminal symbol -
+V->-V.,*			Use V->-V to reduce for terminal symbol *
+V->-V.,/			Use V->-V to reduce for terminal symbol /
+V->-V.,5			Use V->-V to reduce for terminal symbol 5
+V->-V.,6			Use V->-V to reduce for terminal symbol 6
+I130:
+K->(H.),2diw{			action())=I191
+K->(H.),7
+K->(H.),4
+K->(H.),<
+K->(H.),8
+K->(H.),>
+K->(H.),9
+K->(H.),+
+K->(H.),-
+K->(H.),*
+K->(H.),/
+K->(H.),5
+K->(H.),6
+I->H.5,!(-23			action(5)=I76
+I131:
+L->ZFZ.,!(-23			Use L->ZFZ to reduce for terminal symbol !(-23
+I132:
+Z->w.,!(-23			Use Z->w to reduce for terminal symbol !(-23
+I133:
+Z->d.,!(-23			Use Z->d to reduce for terminal symbol !(-23
+I134:
+F->CF.,dw			Use F->CF to reduce for terminal symbol dw
+G->CF.e,2diw{			action(e)=I74
+F->CF.,e			Use F->CF to reduce for terminal symbol e
+I135:
+F->GF.,dw			Use F->GF to reduce for terminal symbol dw
+F->GF.,e			Use F->GF to reduce for terminal symbol e
+I136:
+F->LH.;,dw			action(;)=I192
+F->LH.;,e
+I->H.5,!(-23			action(5)=I76
+I137:
+F->WF.,dw			Use F->WF to reduce for terminal symbol dw
+F->WF.,e			Use F->WF to reduce for terminal symbol e
+I138:
+F->2=.E;,dw			goto(E)=I193
+F->2=.E;,e
+E->.E+T,;
+E->.E-T,;
+E->.T,;			goto(T)=I109
+E->.E+T,+
+E->.E-T,+
+E->.T,+
+E->.E+T,-
+E->.E-T,-
+E->.T,-
+T->.T*U,;
+T->.T/U,;
+T->.U,;			goto(U)=I110
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,;			action(-)=I111
+U->.O,;			goto(O)=I112
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),;			action(()=I113
+O->.2,;			action(2)=I114
+O->.3,;			action(3)=I115
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I139:
+B->{D.S},dw			goto(S)=I194
+B->{D.S},e
+S->.SF,}
+S->.@,}			Use S-> to reduce for terminal symbol }
+S->.SF,2diw{}
+S->.@,2diw{}			Use S-> to reduce for terminal symbol 2diw{}
+I140:
+B->{DS.},}			action(})=I195
+B->{DS.},2diw{}
+B->{DS.},e
+S->S.F,}			goto(F)=I14
+S->S.F,2diw{}
+F->.CF,}			goto(C)=I15
+F->.GF,}			goto(G)=I16
+F->.LH;,}			goto(L)=I17
+F->.WF,}			goto(W)=I18
+F->.2=E;,}			action(2)=I19
+F->.B,}			goto(B)=I20
+F->.CF,2diw{}
+F->.GF,2diw{}
+F->.LH;,2diw{}
+F->.WF,2diw{}
+F->.2=E;,2diw{}
+F->.B,2diw{}
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},}			action({)=I23
+B->.{DS},2diw{}
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+I141:
+Q->Q7R.,;			Use Q->Q7R to reduce for terminal symbol ;
+Q->Q7R.,7			Use Q->Q7R to reduce for terminal symbol 7
+Q->Q7R.,4			Use Q->Q7R to reduce for terminal symbol 4
+Q->Q7R.,5			Use Q->Q7R to reduce for terminal symbol 5
+Q->Q7R.,6			Use Q->Q7R to reduce for terminal symbol 6
+R->R.<X,;			action(<)=I82
+R->R.8X,;			action(8)=I83
+R->R.>X,;			action(>)=I84
+R->R.9X,;			action(9)=I85
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+I142:
+Q->Q4R.,;			Use Q->Q4R to reduce for terminal symbol ;
+Q->Q4R.,7			Use Q->Q4R to reduce for terminal symbol 7
+Q->Q4R.,4			Use Q->Q4R to reduce for terminal symbol 4
+Q->Q4R.,5			Use Q->Q4R to reduce for terminal symbol 5
+Q->Q4R.,6			Use Q->Q4R to reduce for terminal symbol 6
+R->R.<X,;			action(<)=I82
+R->R.8X,;			action(8)=I83
+R->R.>X,;			action(>)=I84
+R->R.9X,;			action(9)=I85
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+I143:
+R->R<X.,;			Use R->R<X to reduce for terminal symbol ;
+R->R<X.,7			Use R->R<X to reduce for terminal symbol 7
+R->R<X.,4			Use R->R<X to reduce for terminal symbol 4
+R->R<X.,<			Use R->R<X to reduce for terminal symbol <
+R->R<X.,8			Use R->R<X to reduce for terminal symbol 8
+R->R<X.,>			Use R->R<X to reduce for terminal symbol >
+R->R<X.,9			Use R->R<X to reduce for terminal symbol 9
+R->R<X.,5			Use R->R<X to reduce for terminal symbol 5
+R->R<X.,6			Use R->R<X to reduce for terminal symbol 6
+X->X.+Y,;			action(+)=I86
+X->X.-Y,;			action(-)=I87
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I144:
+R->R8X.,;			Use R->R8X to reduce for terminal symbol ;
+R->R8X.,7			Use R->R8X to reduce for terminal symbol 7
+R->R8X.,4			Use R->R8X to reduce for terminal symbol 4
+R->R8X.,<			Use R->R8X to reduce for terminal symbol <
+R->R8X.,8			Use R->R8X to reduce for terminal symbol 8
+R->R8X.,>			Use R->R8X to reduce for terminal symbol >
+R->R8X.,9			Use R->R8X to reduce for terminal symbol 9
+R->R8X.,5			Use R->R8X to reduce for terminal symbol 5
+R->R8X.,6			Use R->R8X to reduce for terminal symbol 6
+X->X.+Y,;			action(+)=I86
+X->X.-Y,;			action(-)=I87
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I145:
+R->R>X.,;			Use R->R>X to reduce for terminal symbol ;
+R->R>X.,7			Use R->R>X to reduce for terminal symbol 7
+R->R>X.,4			Use R->R>X to reduce for terminal symbol 4
+R->R>X.,<			Use R->R>X to reduce for terminal symbol <
+R->R>X.,8			Use R->R>X to reduce for terminal symbol 8
+R->R>X.,>			Use R->R>X to reduce for terminal symbol >
+R->R>X.,9			Use R->R>X to reduce for terminal symbol 9
+R->R>X.,5			Use R->R>X to reduce for terminal symbol 5
+R->R>X.,6			Use R->R>X to reduce for terminal symbol 6
+X->X.+Y,;			action(+)=I86
+X->X.-Y,;			action(-)=I87
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I146:
+R->R9X.,;			Use R->R9X to reduce for terminal symbol ;
+R->R9X.,7			Use R->R9X to reduce for terminal symbol 7
+R->R9X.,4			Use R->R9X to reduce for terminal symbol 4
+R->R9X.,<			Use R->R9X to reduce for terminal symbol <
+R->R9X.,8			Use R->R9X to reduce for terminal symbol 8
+R->R9X.,>			Use R->R9X to reduce for terminal symbol >
+R->R9X.,9			Use R->R9X to reduce for terminal symbol 9
+R->R9X.,5			Use R->R9X to reduce for terminal symbol 5
+R->R9X.,6			Use R->R9X to reduce for terminal symbol 6
+X->X.+Y,;			action(+)=I86
+X->X.-Y,;			action(-)=I87
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I147:
+X->X+Y.,;			Use X->X+Y to reduce for terminal symbol ;
+X->X+Y.,7			Use X->X+Y to reduce for terminal symbol 7
+X->X+Y.,4			Use X->X+Y to reduce for terminal symbol 4
+X->X+Y.,<			Use X->X+Y to reduce for terminal symbol <
+X->X+Y.,8			Use X->X+Y to reduce for terminal symbol 8
+X->X+Y.,>			Use X->X+Y to reduce for terminal symbol >
+X->X+Y.,9			Use X->X+Y to reduce for terminal symbol 9
+X->X+Y.,+			Use X->X+Y to reduce for terminal symbol +
+X->X+Y.,-			Use X->X+Y to reduce for terminal symbol -
+X->X+Y.,5			Use X->X+Y to reduce for terminal symbol 5
+X->X+Y.,6			Use X->X+Y to reduce for terminal symbol 6
+Y->Y.*V,;			action(*)=I88
+Y->Y./V,;			action(/)=I89
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+I148:
+X->X-Y.,;			Use X->X-Y to reduce for terminal symbol ;
+X->X-Y.,7			Use X->X-Y to reduce for terminal symbol 7
+X->X-Y.,4			Use X->X-Y to reduce for terminal symbol 4
+X->X-Y.,<			Use X->X-Y to reduce for terminal symbol <
+X->X-Y.,8			Use X->X-Y to reduce for terminal symbol 8
+X->X-Y.,>			Use X->X-Y to reduce for terminal symbol >
+X->X-Y.,9			Use X->X-Y to reduce for terminal symbol 9
+X->X-Y.,+			Use X->X-Y to reduce for terminal symbol +
+X->X-Y.,-			Use X->X-Y to reduce for terminal symbol -
+X->X-Y.,5			Use X->X-Y to reduce for terminal symbol 5
+X->X-Y.,6			Use X->X-Y to reduce for terminal symbol 6
+Y->Y.*V,;			action(*)=I88
+Y->Y./V,;			action(/)=I89
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+I149:
+Y->Y*V.,;			Use Y->Y*V to reduce for terminal symbol ;
+Y->Y*V.,7			Use Y->Y*V to reduce for terminal symbol 7
+Y->Y*V.,4			Use Y->Y*V to reduce for terminal symbol 4
+Y->Y*V.,<			Use Y->Y*V to reduce for terminal symbol <
+Y->Y*V.,8			Use Y->Y*V to reduce for terminal symbol 8
+Y->Y*V.,>			Use Y->Y*V to reduce for terminal symbol >
+Y->Y*V.,9			Use Y->Y*V to reduce for terminal symbol 9
+Y->Y*V.,+			Use Y->Y*V to reduce for terminal symbol +
+Y->Y*V.,-			Use Y->Y*V to reduce for terminal symbol -
+Y->Y*V.,*			Use Y->Y*V to reduce for terminal symbol *
+Y->Y*V.,/			Use Y->Y*V to reduce for terminal symbol /
+Y->Y*V.,5			Use Y->Y*V to reduce for terminal symbol 5
+Y->Y*V.,6			Use Y->Y*V to reduce for terminal symbol 6
+I150:
+Y->Y/V.,;			Use Y->Y/V to reduce for terminal symbol ;
+Y->Y/V.,7			Use Y->Y/V to reduce for terminal symbol 7
+Y->Y/V.,4			Use Y->Y/V to reduce for terminal symbol 4
+Y->Y/V.,<			Use Y->Y/V to reduce for terminal symbol <
+Y->Y/V.,8			Use Y->Y/V to reduce for terminal symbol 8
+Y->Y/V.,>			Use Y->Y/V to reduce for terminal symbol >
+Y->Y/V.,9			Use Y->Y/V to reduce for terminal symbol 9
+Y->Y/V.,+			Use Y->Y/V to reduce for terminal symbol +
+Y->Y/V.,-			Use Y->Y/V to reduce for terminal symbol -
+Y->Y/V.,*			Use Y->Y/V to reduce for terminal symbol *
+Y->Y/V.,/			Use Y->Y/V to reduce for terminal symbol /
+Y->Y/V.,5			Use Y->Y/V to reduce for terminal symbol 5
+Y->Y/V.,6			Use Y->Y/V to reduce for terminal symbol 6
+I151:
+K->(H).,;			Use K->(H) to reduce for terminal symbol ;
+K->(H).,7			Use K->(H) to reduce for terminal symbol 7
+K->(H).,4			Use K->(H) to reduce for terminal symbol 4
+K->(H).,<			Use K->(H) to reduce for terminal symbol <
+K->(H).,8			Use K->(H) to reduce for terminal symbol 8
+K->(H).,>			Use K->(H) to reduce for terminal symbol >
+K->(H).,9			Use K->(H) to reduce for terminal symbol 9
+K->(H).,+			Use K->(H) to reduce for terminal symbol +
+K->(H).,-			Use K->(H) to reduce for terminal symbol -
+K->(H).,*			Use K->(H) to reduce for terminal symbol *
+K->(H).,/			Use K->(H) to reduce for terminal symbol /
+K->(H).,5			Use K->(H) to reduce for terminal symbol 5
+K->(H).,6			Use K->(H) to reduce for terminal symbol 6
+I152:
+H->IJ.,)			Use H->IJ to reduce for terminal symbol )
+H->IJ.,5			Use H->IJ to reduce for terminal symbol 5
+N->J.6,!(-23			action(6)=I78
+I153:
+J->NM.,)			Use J->NM to reduce for terminal symbol )
+J->NM.,5			Use J->NM to reduce for terminal symbol 5
+J->NM.,6			Use J->NM to reduce for terminal symbol 6
+I154:
+Q->Q7.R,)			goto(R)=I196
+Q->Q7.R,7
+Q->Q7.R,4
+Q->Q7.R,5
+Q->Q7.R,6
+R->.R<X,)
+R->.R8X,)
+R->.R>X,)
+R->.R9X,)
+R->.X,)			goto(X)=I99
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I155:
+Q->Q4.R,)			goto(R)=I197
+Q->Q4.R,7
+Q->Q4.R,4
+Q->Q4.R,5
+Q->Q4.R,6
+R->.R<X,)
+R->.R8X,)
+R->.R>X,)
+R->.R9X,)
+R->.X,)			goto(X)=I99
+R->.R<X,7
+R->.R8X,7
+R->.R>X,7
+R->.R9X,7
+R->.X,7
+R->.R<X,4
+R->.R8X,4
+R->.R>X,4
+R->.R9X,4
+R->.X,4
+R->.R<X,5
+R->.R8X,5
+R->.R>X,5
+R->.R9X,5
+R->.X,5
+R->.R<X,6
+R->.R8X,6
+R->.R>X,6
+R->.R9X,6
+R->.X,6
+R->.R<X,<
+R->.R8X,<
+R->.R>X,<
+R->.R9X,<
+R->.X,<
+R->.R<X,8
+R->.R8X,8
+R->.R>X,8
+R->.R9X,8
+R->.X,8
+R->.R<X,>
+R->.R8X,>
+R->.R>X,>
+R->.R9X,>
+R->.X,>
+R->.R<X,9
+R->.R8X,9
+R->.R>X,9
+R->.R9X,9
+R->.X,9
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I156:
+R->R<.X,)			goto(X)=I198
+R->R<.X,7
+R->R<.X,4
+R->R<.X,<
+R->R<.X,8
+R->R<.X,>
+R->R<.X,9
+R->R<.X,5
+R->R<.X,6
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I157:
+R->R8.X,)			goto(X)=I199
+R->R8.X,7
+R->R8.X,4
+R->R8.X,<
+R->R8.X,8
+R->R8.X,>
+R->R8.X,9
+R->R8.X,5
+R->R8.X,6
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I158:
+R->R>.X,)			goto(X)=I200
+R->R>.X,7
+R->R>.X,4
+R->R>.X,<
+R->R>.X,8
+R->R>.X,>
+R->R>.X,9
+R->R>.X,5
+R->R>.X,6
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I159:
+R->R9.X,)			goto(X)=I201
+R->R9.X,7
+R->R9.X,4
+R->R9.X,<
+R->R9.X,8
+R->R9.X,>
+R->R9.X,9
+R->R9.X,5
+R->R9.X,6
+X->.X+Y,)
+X->.X-Y,)
+X->.Y,)			goto(Y)=I100
+X->.X+Y,7
+X->.X-Y,7
+X->.Y,7
+X->.X+Y,4
+X->.X-Y,4
+X->.Y,4
+X->.X+Y,<
+X->.X-Y,<
+X->.Y,<
+X->.X+Y,8
+X->.X-Y,8
+X->.Y,8
+X->.X+Y,>
+X->.X-Y,>
+X->.Y,>
+X->.X+Y,9
+X->.X-Y,9
+X->.Y,9
+X->.X+Y,5
+X->.X-Y,5
+X->.Y,5
+X->.X+Y,6
+X->.X-Y,6
+X->.Y,6
+X->.X+Y,+
+X->.X-Y,+
+X->.Y,+
+X->.X+Y,-
+X->.X-Y,-
+X->.Y,-
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I160:
+X->X+.Y,)			goto(Y)=I202
+X->X+.Y,7
+X->X+.Y,4
+X->X+.Y,<
+X->X+.Y,8
+X->X+.Y,>
+X->X+.Y,9
+X->X+.Y,+
+X->X+.Y,-
+X->X+.Y,5
+X->X+.Y,6
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I161:
+X->X-.Y,)			goto(Y)=I203
+X->X-.Y,7
+X->X-.Y,4
+X->X-.Y,<
+X->X-.Y,8
+X->X-.Y,>
+X->X-.Y,9
+X->X-.Y,+
+X->X-.Y,-
+X->X-.Y,5
+X->X-.Y,6
+Y->.Y*V,)
+Y->.Y/V,)
+Y->.V,)			goto(V)=I101
+Y->.Y*V,7
+Y->.Y/V,7
+Y->.V,7
+Y->.Y*V,4
+Y->.Y/V,4
+Y->.V,4
+Y->.Y*V,<
+Y->.Y/V,<
+Y->.V,<
+Y->.Y*V,8
+Y->.Y/V,8
+Y->.V,8
+Y->.Y*V,>
+Y->.Y/V,>
+Y->.V,>
+Y->.Y*V,9
+Y->.Y/V,9
+Y->.V,9
+Y->.Y*V,+
+Y->.Y/V,+
+Y->.V,+
+Y->.Y*V,-
+Y->.Y/V,-
+Y->.V,-
+Y->.Y*V,5
+Y->.Y/V,5
+Y->.V,5
+Y->.Y*V,6
+Y->.Y/V,6
+Y->.V,6
+Y->.Y*V,*
+Y->.Y/V,*
+Y->.V,*
+Y->.Y*V,/
+Y->.Y/V,/
+Y->.V,/
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+I162:
+Y->Y*.V,)			goto(V)=I204
+Y->Y*.V,7
+Y->Y*.V,4
+Y->Y*.V,<
+Y->Y*.V,8
+Y->Y*.V,>
+Y->Y*.V,9
+Y->Y*.V,+
+Y->Y*.V,-
+Y->Y*.V,*
+Y->Y*.V,/
+Y->Y*.V,5
+Y->Y*.V,6
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I163:
+Y->Y/.V,)			goto(V)=I205
+Y->Y/.V,7
+Y->Y/.V,4
+Y->Y/.V,<
+Y->Y/.V,8
+Y->Y/.V,>
+Y->Y/.V,9
+Y->Y/.V,+
+Y->Y/.V,-
+Y->Y/.V,*
+Y->Y/.V,/
+Y->Y/.V,5
+Y->Y/.V,6
+V->.!V,)			action(!)=I102
+V->.-V,)			action(-)=I103
+V->.K,)			goto(K)=I104
+V->.!V,7
+V->.-V,7
+V->.K,7
+V->.!V,4
+V->.-V,4
+V->.K,4
+V->.!V,<
+V->.-V,<
+V->.K,<
+V->.!V,8
+V->.-V,8
+V->.K,8
+V->.!V,>
+V->.-V,>
+V->.K,>
+V->.!V,9
+V->.-V,9
+V->.K,9
+V->.!V,+
+V->.-V,+
+V->.K,+
+V->.!V,-
+V->.-V,-
+V->.K,-
+V->.!V,*
+V->.-V,*
+V->.K,*
+V->.!V,/
+V->.-V,/
+V->.K,/
+V->.!V,5
+V->.-V,5
+V->.K,5
+V->.!V,6
+V->.-V,6
+V->.K,6
+K->.(H),)			action(()=I105
+K->.2,)			action(2)=I106
+K->.3,)			action(3)=I107
+K->.(H),7
+K->.2,7
+K->.3,7
+K->.(H),4
+K->.2,4
+K->.3,4
+K->.(H),<
+K->.2,<
+K->.3,<
+K->.(H),8
+K->.2,8
+K->.3,8
+K->.(H),>
+K->.2,>
+K->.3,>
+K->.(H),9
+K->.2,9
+K->.3,9
+K->.(H),+
+K->.2,+
+K->.3,+
+K->.(H),-
+K->.2,-
+K->.3,-
+K->.(H),*
+K->.2,*
+K->.3,*
+K->.(H),/
+K->.2,/
+K->.3,/
+K->.(H),5
+K->.2,5
+K->.3,5
+K->.(H),6
+K->.2,6
+K->.3,6
+I164:
+V->!V.,)			Use V->!V to reduce for terminal symbol )
+V->!V.,7			Use V->!V to reduce for terminal symbol 7
+V->!V.,4			Use V->!V to reduce for terminal symbol 4
+V->!V.,<			Use V->!V to reduce for terminal symbol <
+V->!V.,8			Use V->!V to reduce for terminal symbol 8
+V->!V.,>			Use V->!V to reduce for terminal symbol >
+V->!V.,9			Use V->!V to reduce for terminal symbol 9
+V->!V.,+			Use V->!V to reduce for terminal symbol +
+V->!V.,-			Use V->!V to reduce for terminal symbol -
+V->!V.,*			Use V->!V to reduce for terminal symbol *
+V->!V.,/			Use V->!V to reduce for terminal symbol /
+V->!V.,5			Use V->!V to reduce for terminal symbol 5
+V->!V.,6			Use V->!V to reduce for terminal symbol 6
+I165:
+V->-V.,)			Use V->-V to reduce for terminal symbol )
+V->-V.,7			Use V->-V to reduce for terminal symbol 7
+V->-V.,4			Use V->-V to reduce for terminal symbol 4
+V->-V.,<			Use V->-V to reduce for terminal symbol <
+V->-V.,8			Use V->-V to reduce for terminal symbol 8
+V->-V.,>			Use V->-V to reduce for terminal symbol >
+V->-V.,9			Use V->-V to reduce for terminal symbol 9
+V->-V.,+			Use V->-V to reduce for terminal symbol +
+V->-V.,-			Use V->-V to reduce for terminal symbol -
+V->-V.,*			Use V->-V to reduce for terminal symbol *
+V->-V.,/			Use V->-V to reduce for terminal symbol /
+V->-V.,5			Use V->-V to reduce for terminal symbol 5
+V->-V.,6			Use V->-V to reduce for terminal symbol 6
+I166:
+K->(H.),)			action())=I206
+K->(H.),7
+K->(H.),4
+K->(H.),<
+K->(H.),8
+K->(H.),>
+K->(H.),9
+K->(H.),+
+K->(H.),-
+K->(H.),*
+K->(H.),/
+K->(H.),5
+K->(H.),6
+I->H.5,!(-23			action(5)=I76
+I167:
+F->2=E;.,}			Use F->2=E; to reduce for terminal symbol }
+F->2=E;.,2diw{}			Use F->2=E; to reduce for terminal symbol 2diw{}
+F->2=E;.,e			Use F->2=E; to reduce for terminal symbol e
+I168:
+E->E+.T,;			goto(T)=I207
+E->E+.T,+
+E->E+.T,-
+T->.T*U,;
+T->.T/U,;
+T->.U,;			goto(U)=I110
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,;			action(-)=I111
+U->.O,;			goto(O)=I112
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),;			action(()=I113
+O->.2,;			action(2)=I114
+O->.3,;			action(3)=I115
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I169:
+E->E-.T,;			goto(T)=I208
+E->E-.T,+
+E->E-.T,-
+T->.T*U,;
+T->.T/U,;
+T->.U,;			goto(U)=I110
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,;			action(-)=I111
+U->.O,;			goto(O)=I112
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),;			action(()=I113
+O->.2,;			action(2)=I114
+O->.3,;			action(3)=I115
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I170:
+T->T*.U,;			goto(U)=I209
+T->T*.U,+
+T->T*.U,-
+T->T*.U,*
+T->T*.U,/
+U->.-U,;			action(-)=I111
+U->.O,;			goto(O)=I112
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),;			action(()=I113
+O->.2,;			action(2)=I114
+O->.3,;			action(3)=I115
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I171:
+T->T/.U,;			goto(U)=I210
+T->T/.U,+
+T->T/.U,-
+T->T/.U,*
+T->T/.U,/
+U->.-U,;			action(-)=I111
+U->.O,;			goto(O)=I112
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),;			action(()=I113
+O->.2,;			action(2)=I114
+O->.3,;			action(3)=I115
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I172:
+U->-U.,;			Use U->-U to reduce for terminal symbol ;
+U->-U.,+			Use U->-U to reduce for terminal symbol +
+U->-U.,-			Use U->-U to reduce for terminal symbol -
+U->-U.,*			Use U->-U to reduce for terminal symbol *
+U->-U.,/			Use U->-U to reduce for terminal symbol /
+I173:
+O->(E.),;			action())=I211
+O->(E.),+
+O->(E.),-
+O->(E.),*
+O->(E.),/
+E->E.+T,)			action(+)=I212
+E->E.-T,)			action(-)=I213
+E->E.+T,+
+E->E.-T,+
+E->E.+T,-
+E->E.-T,-
+I174:
+E->T.,)			Use E->T to reduce for terminal symbol )
+E->T.,+			Use E->T to reduce for terminal symbol +
+E->T.,-			Use E->T to reduce for terminal symbol -
+T->T.*U,)			action(*)=I214
+T->T./U,)			action(/)=I215
+T->T.*U,+
+T->T./U,+
+T->T.*U,-
+T->T./U,-
+T->T.*U,*
+T->T./U,*
+T->T.*U,/
+T->T./U,/
+I175:
+T->U.,)			Use T->U to reduce for terminal symbol )
+T->U.,+			Use T->U to reduce for terminal symbol +
+T->U.,-			Use T->U to reduce for terminal symbol -
+T->U.,*			Use T->U to reduce for terminal symbol *
+T->U.,/			Use T->U to reduce for terminal symbol /
+I176:
+U->-.U,)			goto(U)=I216
+U->-.U,+
+U->-.U,-
+U->-.U,*
+U->-.U,/
+U->.-U,)			action(-)=I176
+U->.O,)			goto(O)=I177
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),)			action(()=I178
+O->.2,)			action(2)=I179
+O->.3,)			action(3)=I180
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I177:
+U->O.,)			Use U->O to reduce for terminal symbol )
+U->O.,+			Use U->O to reduce for terminal symbol +
+U->O.,-			Use U->O to reduce for terminal symbol -
+U->O.,*			Use U->O to reduce for terminal symbol *
+U->O.,/			Use U->O to reduce for terminal symbol /
+I178:
+O->(.E),)			goto(E)=I217
+O->(.E),+
+O->(.E),-
+O->(.E),*
+O->(.E),/
+E->.E+T,)
+E->.E-T,)
+E->.T,)			goto(T)=I174
+E->.E+T,+
+E->.E-T,+
+E->.T,+
+E->.E+T,-
+E->.E-T,-
+E->.T,-
+T->.T*U,)
+T->.T/U,)
+T->.U,)			goto(U)=I175
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,)			action(-)=I176
+U->.O,)			goto(O)=I177
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),)			action(()=I178
+O->.2,)			action(2)=I179
+O->.3,)			action(3)=I180
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I179:
+O->2.,)			Use O->2 to reduce for terminal symbol )
+O->2.,+			Use O->2 to reduce for terminal symbol +
+O->2.,-			Use O->2 to reduce for terminal symbol -
+O->2.,*			Use O->2 to reduce for terminal symbol *
+O->2.,/			Use O->2 to reduce for terminal symbol /
+I180:
+O->3.,)			Use O->3 to reduce for terminal symbol )
+O->3.,+			Use O->3 to reduce for terminal symbol +
+O->3.,-			Use O->3 to reduce for terminal symbol -
+O->3.,*			Use O->3 to reduce for terminal symbol *
+O->3.,/			Use O->3 to reduce for terminal symbol /
+I181:
+Q->Q7R.,2diw{			Use Q->Q7R to reduce for terminal symbol 2diw{
+Q->Q7R.,7			Use Q->Q7R to reduce for terminal symbol 7
+Q->Q7R.,4			Use Q->Q7R to reduce for terminal symbol 4
+Q->Q7R.,5			Use Q->Q7R to reduce for terminal symbol 5
+Q->Q7R.,6			Use Q->Q7R to reduce for terminal symbol 6
+R->R.<X,2diw{			action(<)=I120
+R->R.8X,2diw{			action(8)=I121
+R->R.>X,2diw{			action(>)=I122
+R->R.9X,2diw{			action(9)=I123
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+I182:
+Q->Q4R.,2diw{			Use Q->Q4R to reduce for terminal symbol 2diw{
+Q->Q4R.,7			Use Q->Q4R to reduce for terminal symbol 7
+Q->Q4R.,4			Use Q->Q4R to reduce for terminal symbol 4
+Q->Q4R.,5			Use Q->Q4R to reduce for terminal symbol 5
+Q->Q4R.,6			Use Q->Q4R to reduce for terminal symbol 6
+R->R.<X,2diw{			action(<)=I120
+R->R.8X,2diw{			action(8)=I121
+R->R.>X,2diw{			action(>)=I122
+R->R.9X,2diw{			action(9)=I123
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+I183:
+R->R<X.,2diw{			Use R->R<X to reduce for terminal symbol 2diw{
+R->R<X.,7			Use R->R<X to reduce for terminal symbol 7
+R->R<X.,4			Use R->R<X to reduce for terminal symbol 4
+R->R<X.,<			Use R->R<X to reduce for terminal symbol <
+R->R<X.,8			Use R->R<X to reduce for terminal symbol 8
+R->R<X.,>			Use R->R<X to reduce for terminal symbol >
+R->R<X.,9			Use R->R<X to reduce for terminal symbol 9
+R->R<X.,5			Use R->R<X to reduce for terminal symbol 5
+R->R<X.,6			Use R->R<X to reduce for terminal symbol 6
+X->X.+Y,2diw{			action(+)=I124
+X->X.-Y,2diw{			action(-)=I125
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I184:
+R->R8X.,2diw{			Use R->R8X to reduce for terminal symbol 2diw{
+R->R8X.,7			Use R->R8X to reduce for terminal symbol 7
+R->R8X.,4			Use R->R8X to reduce for terminal symbol 4
+R->R8X.,<			Use R->R8X to reduce for terminal symbol <
+R->R8X.,8			Use R->R8X to reduce for terminal symbol 8
+R->R8X.,>			Use R->R8X to reduce for terminal symbol >
+R->R8X.,9			Use R->R8X to reduce for terminal symbol 9
+R->R8X.,5			Use R->R8X to reduce for terminal symbol 5
+R->R8X.,6			Use R->R8X to reduce for terminal symbol 6
+X->X.+Y,2diw{			action(+)=I124
+X->X.-Y,2diw{			action(-)=I125
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I185:
+R->R>X.,2diw{			Use R->R>X to reduce for terminal symbol 2diw{
+R->R>X.,7			Use R->R>X to reduce for terminal symbol 7
+R->R>X.,4			Use R->R>X to reduce for terminal symbol 4
+R->R>X.,<			Use R->R>X to reduce for terminal symbol <
+R->R>X.,8			Use R->R>X to reduce for terminal symbol 8
+R->R>X.,>			Use R->R>X to reduce for terminal symbol >
+R->R>X.,9			Use R->R>X to reduce for terminal symbol 9
+R->R>X.,5			Use R->R>X to reduce for terminal symbol 5
+R->R>X.,6			Use R->R>X to reduce for terminal symbol 6
+X->X.+Y,2diw{			action(+)=I124
+X->X.-Y,2diw{			action(-)=I125
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I186:
+R->R9X.,2diw{			Use R->R9X to reduce for terminal symbol 2diw{
+R->R9X.,7			Use R->R9X to reduce for terminal symbol 7
+R->R9X.,4			Use R->R9X to reduce for terminal symbol 4
+R->R9X.,<			Use R->R9X to reduce for terminal symbol <
+R->R9X.,8			Use R->R9X to reduce for terminal symbol 8
+R->R9X.,>			Use R->R9X to reduce for terminal symbol >
+R->R9X.,9			Use R->R9X to reduce for terminal symbol 9
+R->R9X.,5			Use R->R9X to reduce for terminal symbol 5
+R->R9X.,6			Use R->R9X to reduce for terminal symbol 6
+X->X.+Y,2diw{			action(+)=I124
+X->X.-Y,2diw{			action(-)=I125
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I187:
+X->X+Y.,2diw{			Use X->X+Y to reduce for terminal symbol 2diw{
+X->X+Y.,7			Use X->X+Y to reduce for terminal symbol 7
+X->X+Y.,4			Use X->X+Y to reduce for terminal symbol 4
+X->X+Y.,<			Use X->X+Y to reduce for terminal symbol <
+X->X+Y.,8			Use X->X+Y to reduce for terminal symbol 8
+X->X+Y.,>			Use X->X+Y to reduce for terminal symbol >
+X->X+Y.,9			Use X->X+Y to reduce for terminal symbol 9
+X->X+Y.,+			Use X->X+Y to reduce for terminal symbol +
+X->X+Y.,-			Use X->X+Y to reduce for terminal symbol -
+X->X+Y.,5			Use X->X+Y to reduce for terminal symbol 5
+X->X+Y.,6			Use X->X+Y to reduce for terminal symbol 6
+Y->Y.*V,2diw{			action(*)=I126
+Y->Y./V,2diw{			action(/)=I127
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+I188:
+X->X-Y.,2diw{			Use X->X-Y to reduce for terminal symbol 2diw{
+X->X-Y.,7			Use X->X-Y to reduce for terminal symbol 7
+X->X-Y.,4			Use X->X-Y to reduce for terminal symbol 4
+X->X-Y.,<			Use X->X-Y to reduce for terminal symbol <
+X->X-Y.,8			Use X->X-Y to reduce for terminal symbol 8
+X->X-Y.,>			Use X->X-Y to reduce for terminal symbol >
+X->X-Y.,9			Use X->X-Y to reduce for terminal symbol 9
+X->X-Y.,+			Use X->X-Y to reduce for terminal symbol +
+X->X-Y.,-			Use X->X-Y to reduce for terminal symbol -
+X->X-Y.,5			Use X->X-Y to reduce for terminal symbol 5
+X->X-Y.,6			Use X->X-Y to reduce for terminal symbol 6
+Y->Y.*V,2diw{			action(*)=I126
+Y->Y./V,2diw{			action(/)=I127
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+I189:
+Y->Y*V.,2diw{			Use Y->Y*V to reduce for terminal symbol 2diw{
+Y->Y*V.,7			Use Y->Y*V to reduce for terminal symbol 7
+Y->Y*V.,4			Use Y->Y*V to reduce for terminal symbol 4
+Y->Y*V.,<			Use Y->Y*V to reduce for terminal symbol <
+Y->Y*V.,8			Use Y->Y*V to reduce for terminal symbol 8
+Y->Y*V.,>			Use Y->Y*V to reduce for terminal symbol >
+Y->Y*V.,9			Use Y->Y*V to reduce for terminal symbol 9
+Y->Y*V.,+			Use Y->Y*V to reduce for terminal symbol +
+Y->Y*V.,-			Use Y->Y*V to reduce for terminal symbol -
+Y->Y*V.,*			Use Y->Y*V to reduce for terminal symbol *
+Y->Y*V.,/			Use Y->Y*V to reduce for terminal symbol /
+Y->Y*V.,5			Use Y->Y*V to reduce for terminal symbol 5
+Y->Y*V.,6			Use Y->Y*V to reduce for terminal symbol 6
+I190:
+Y->Y/V.,2diw{			Use Y->Y/V to reduce for terminal symbol 2diw{
+Y->Y/V.,7			Use Y->Y/V to reduce for terminal symbol 7
+Y->Y/V.,4			Use Y->Y/V to reduce for terminal symbol 4
+Y->Y/V.,<			Use Y->Y/V to reduce for terminal symbol <
+Y->Y/V.,8			Use Y->Y/V to reduce for terminal symbol 8
+Y->Y/V.,>			Use Y->Y/V to reduce for terminal symbol >
+Y->Y/V.,9			Use Y->Y/V to reduce for terminal symbol 9
+Y->Y/V.,+			Use Y->Y/V to reduce for terminal symbol +
+Y->Y/V.,-			Use Y->Y/V to reduce for terminal symbol -
+Y->Y/V.,*			Use Y->Y/V to reduce for terminal symbol *
+Y->Y/V.,/			Use Y->Y/V to reduce for terminal symbol /
+Y->Y/V.,5			Use Y->Y/V to reduce for terminal symbol 5
+Y->Y/V.,6			Use Y->Y/V to reduce for terminal symbol 6
+I191:
+K->(H).,2diw{			Use K->(H) to reduce for terminal symbol 2diw{
+K->(H).,7			Use K->(H) to reduce for terminal symbol 7
+K->(H).,4			Use K->(H) to reduce for terminal symbol 4
+K->(H).,<			Use K->(H) to reduce for terminal symbol <
+K->(H).,8			Use K->(H) to reduce for terminal symbol 8
+K->(H).,>			Use K->(H) to reduce for terminal symbol >
+K->(H).,9			Use K->(H) to reduce for terminal symbol 9
+K->(H).,+			Use K->(H) to reduce for terminal symbol +
+K->(H).,-			Use K->(H) to reduce for terminal symbol -
+K->(H).,*			Use K->(H) to reduce for terminal symbol *
+K->(H).,/			Use K->(H) to reduce for terminal symbol /
+K->(H).,5			Use K->(H) to reduce for terminal symbol 5
+K->(H).,6			Use K->(H) to reduce for terminal symbol 6
+I192:
+F->LH;.,dw			Use F->LH; to reduce for terminal symbol dw
+F->LH;.,e			Use F->LH; to reduce for terminal symbol e
+I193:
+F->2=E.;,dw			action(;)=I218
+F->2=E.;,e
+E->E.+T,;			action(+)=I168
+E->E.-T,;			action(-)=I169
+E->E.+T,+
+E->E.-T,+
+E->E.+T,-
+E->E.-T,-
+I194:
+B->{DS.},dw			action(})=I219
+B->{DS.},e
+S->S.F,}			goto(F)=I14
+S->S.F,2diw{}
+F->.CF,}			goto(C)=I15
+F->.GF,}			goto(G)=I16
+F->.LH;,}			goto(L)=I17
+F->.WF,}			goto(W)=I18
+F->.2=E;,}			action(2)=I19
+F->.B,}			goto(B)=I20
+F->.CF,2diw{}
+F->.GF,2diw{}
+F->.LH;,2diw{}
+F->.WF,2diw{}
+F->.2=E;,2diw{}
+F->.B,2diw{}
+C->.iH,2diw{			action(i)=I21
+G->.CFe,2diw{
+L->.ZFZ,!(-23			goto(Z)=I22
+W->.ZH,2diw{
+B->.{DS},}			action({)=I23
+B->.{DS},2diw{}
+Z->.w,2diw{			action(w)=I24
+Z->.d,2diw{			action(d)=I25
+Z->.w,!(-23
+Z->.d,!(-23
+I195:
+B->{DS}.,}			Use B->{DS} to reduce for terminal symbol }
+B->{DS}.,2diw{}			Use B->{DS} to reduce for terminal symbol 2diw{}
+B->{DS}.,e			Use B->{DS} to reduce for terminal symbol e
+I196:
+Q->Q7R.,)			Use Q->Q7R to reduce for terminal symbol )
+Q->Q7R.,7			Use Q->Q7R to reduce for terminal symbol 7
+Q->Q7R.,4			Use Q->Q7R to reduce for terminal symbol 4
+Q->Q7R.,5			Use Q->Q7R to reduce for terminal symbol 5
+Q->Q7R.,6			Use Q->Q7R to reduce for terminal symbol 6
+R->R.<X,)			action(<)=I156
+R->R.8X,)			action(8)=I157
+R->R.>X,)			action(>)=I158
+R->R.9X,)			action(9)=I159
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+I197:
+Q->Q4R.,)			Use Q->Q4R to reduce for terminal symbol )
+Q->Q4R.,7			Use Q->Q4R to reduce for terminal symbol 7
+Q->Q4R.,4			Use Q->Q4R to reduce for terminal symbol 4
+Q->Q4R.,5			Use Q->Q4R to reduce for terminal symbol 5
+Q->Q4R.,6			Use Q->Q4R to reduce for terminal symbol 6
+R->R.<X,)			action(<)=I156
+R->R.8X,)			action(8)=I157
+R->R.>X,)			action(>)=I158
+R->R.9X,)			action(9)=I159
+R->R.<X,7
+R->R.8X,7
+R->R.>X,7
+R->R.9X,7
+R->R.<X,4
+R->R.8X,4
+R->R.>X,4
+R->R.9X,4
+R->R.<X,5
+R->R.8X,5
+R->R.>X,5
+R->R.9X,5
+R->R.<X,6
+R->R.8X,6
+R->R.>X,6
+R->R.9X,6
+R->R.<X,<
+R->R.8X,<
+R->R.>X,<
+R->R.9X,<
+R->R.<X,8
+R->R.8X,8
+R->R.>X,8
+R->R.9X,8
+R->R.<X,>
+R->R.8X,>
+R->R.>X,>
+R->R.9X,>
+R->R.<X,9
+R->R.8X,9
+R->R.>X,9
+R->R.9X,9
+I198:
+R->R<X.,)			Use R->R<X to reduce for terminal symbol )
+R->R<X.,7			Use R->R<X to reduce for terminal symbol 7
+R->R<X.,4			Use R->R<X to reduce for terminal symbol 4
+R->R<X.,<			Use R->R<X to reduce for terminal symbol <
+R->R<X.,8			Use R->R<X to reduce for terminal symbol 8
+R->R<X.,>			Use R->R<X to reduce for terminal symbol >
+R->R<X.,9			Use R->R<X to reduce for terminal symbol 9
+R->R<X.,5			Use R->R<X to reduce for terminal symbol 5
+R->R<X.,6			Use R->R<X to reduce for terminal symbol 6
+X->X.+Y,)			action(+)=I160
+X->X.-Y,)			action(-)=I161
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I199:
+R->R8X.,)			Use R->R8X to reduce for terminal symbol )
+R->R8X.,7			Use R->R8X to reduce for terminal symbol 7
+R->R8X.,4			Use R->R8X to reduce for terminal symbol 4
+R->R8X.,<			Use R->R8X to reduce for terminal symbol <
+R->R8X.,8			Use R->R8X to reduce for terminal symbol 8
+R->R8X.,>			Use R->R8X to reduce for terminal symbol >
+R->R8X.,9			Use R->R8X to reduce for terminal symbol 9
+R->R8X.,5			Use R->R8X to reduce for terminal symbol 5
+R->R8X.,6			Use R->R8X to reduce for terminal symbol 6
+X->X.+Y,)			action(+)=I160
+X->X.-Y,)			action(-)=I161
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I200:
+R->R>X.,)			Use R->R>X to reduce for terminal symbol )
+R->R>X.,7			Use R->R>X to reduce for terminal symbol 7
+R->R>X.,4			Use R->R>X to reduce for terminal symbol 4
+R->R>X.,<			Use R->R>X to reduce for terminal symbol <
+R->R>X.,8			Use R->R>X to reduce for terminal symbol 8
+R->R>X.,>			Use R->R>X to reduce for terminal symbol >
+R->R>X.,9			Use R->R>X to reduce for terminal symbol 9
+R->R>X.,5			Use R->R>X to reduce for terminal symbol 5
+R->R>X.,6			Use R->R>X to reduce for terminal symbol 6
+X->X.+Y,)			action(+)=I160
+X->X.-Y,)			action(-)=I161
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I201:
+R->R9X.,)			Use R->R9X to reduce for terminal symbol )
+R->R9X.,7			Use R->R9X to reduce for terminal symbol 7
+R->R9X.,4			Use R->R9X to reduce for terminal symbol 4
+R->R9X.,<			Use R->R9X to reduce for terminal symbol <
+R->R9X.,8			Use R->R9X to reduce for terminal symbol 8
+R->R9X.,>			Use R->R9X to reduce for terminal symbol >
+R->R9X.,9			Use R->R9X to reduce for terminal symbol 9
+R->R9X.,5			Use R->R9X to reduce for terminal symbol 5
+R->R9X.,6			Use R->R9X to reduce for terminal symbol 6
+X->X.+Y,)			action(+)=I160
+X->X.-Y,)			action(-)=I161
+X->X.+Y,7
+X->X.-Y,7
+X->X.+Y,4
+X->X.-Y,4
+X->X.+Y,<
+X->X.-Y,<
+X->X.+Y,8
+X->X.-Y,8
+X->X.+Y,>
+X->X.-Y,>
+X->X.+Y,9
+X->X.-Y,9
+X->X.+Y,5
+X->X.-Y,5
+X->X.+Y,6
+X->X.-Y,6
+X->X.+Y,+
+X->X.-Y,+
+X->X.+Y,-
+X->X.-Y,-
+I202:
+X->X+Y.,)			Use X->X+Y to reduce for terminal symbol )
+X->X+Y.,7			Use X->X+Y to reduce for terminal symbol 7
+X->X+Y.,4			Use X->X+Y to reduce for terminal symbol 4
+X->X+Y.,<			Use X->X+Y to reduce for terminal symbol <
+X->X+Y.,8			Use X->X+Y to reduce for terminal symbol 8
+X->X+Y.,>			Use X->X+Y to reduce for terminal symbol >
+X->X+Y.,9			Use X->X+Y to reduce for terminal symbol 9
+X->X+Y.,+			Use X->X+Y to reduce for terminal symbol +
+X->X+Y.,-			Use X->X+Y to reduce for terminal symbol -
+X->X+Y.,5			Use X->X+Y to reduce for terminal symbol 5
+X->X+Y.,6			Use X->X+Y to reduce for terminal symbol 6
+Y->Y.*V,)			action(*)=I162
+Y->Y./V,)			action(/)=I163
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+I203:
+X->X-Y.,)			Use X->X-Y to reduce for terminal symbol )
+X->X-Y.,7			Use X->X-Y to reduce for terminal symbol 7
+X->X-Y.,4			Use X->X-Y to reduce for terminal symbol 4
+X->X-Y.,<			Use X->X-Y to reduce for terminal symbol <
+X->X-Y.,8			Use X->X-Y to reduce for terminal symbol 8
+X->X-Y.,>			Use X->X-Y to reduce for terminal symbol >
+X->X-Y.,9			Use X->X-Y to reduce for terminal symbol 9
+X->X-Y.,+			Use X->X-Y to reduce for terminal symbol +
+X->X-Y.,-			Use X->X-Y to reduce for terminal symbol -
+X->X-Y.,5			Use X->X-Y to reduce for terminal symbol 5
+X->X-Y.,6			Use X->X-Y to reduce for terminal symbol 6
+Y->Y.*V,)			action(*)=I162
+Y->Y./V,)			action(/)=I163
+Y->Y.*V,7
+Y->Y./V,7
+Y->Y.*V,4
+Y->Y./V,4
+Y->Y.*V,<
+Y->Y./V,<
+Y->Y.*V,8
+Y->Y./V,8
+Y->Y.*V,>
+Y->Y./V,>
+Y->Y.*V,9
+Y->Y./V,9
+Y->Y.*V,+
+Y->Y./V,+
+Y->Y.*V,-
+Y->Y./V,-
+Y->Y.*V,5
+Y->Y./V,5
+Y->Y.*V,6
+Y->Y./V,6
+Y->Y.*V,*
+Y->Y./V,*
+Y->Y.*V,/
+Y->Y./V,/
+I204:
+Y->Y*V.,)			Use Y->Y*V to reduce for terminal symbol )
+Y->Y*V.,7			Use Y->Y*V to reduce for terminal symbol 7
+Y->Y*V.,4			Use Y->Y*V to reduce for terminal symbol 4
+Y->Y*V.,<			Use Y->Y*V to reduce for terminal symbol <
+Y->Y*V.,8			Use Y->Y*V to reduce for terminal symbol 8
+Y->Y*V.,>			Use Y->Y*V to reduce for terminal symbol >
+Y->Y*V.,9			Use Y->Y*V to reduce for terminal symbol 9
+Y->Y*V.,+			Use Y->Y*V to reduce for terminal symbol +
+Y->Y*V.,-			Use Y->Y*V to reduce for terminal symbol -
+Y->Y*V.,*			Use Y->Y*V to reduce for terminal symbol *
+Y->Y*V.,/			Use Y->Y*V to reduce for terminal symbol /
+Y->Y*V.,5			Use Y->Y*V to reduce for terminal symbol 5
+Y->Y*V.,6			Use Y->Y*V to reduce for terminal symbol 6
+I205:
+Y->Y/V.,)			Use Y->Y/V to reduce for terminal symbol )
+Y->Y/V.,7			Use Y->Y/V to reduce for terminal symbol 7
+Y->Y/V.,4			Use Y->Y/V to reduce for terminal symbol 4
+Y->Y/V.,<			Use Y->Y/V to reduce for terminal symbol <
+Y->Y/V.,8			Use Y->Y/V to reduce for terminal symbol 8
+Y->Y/V.,>			Use Y->Y/V to reduce for terminal symbol >
+Y->Y/V.,9			Use Y->Y/V to reduce for terminal symbol 9
+Y->Y/V.,+			Use Y->Y/V to reduce for terminal symbol +
+Y->Y/V.,-			Use Y->Y/V to reduce for terminal symbol -
+Y->Y/V.,*			Use Y->Y/V to reduce for terminal symbol *
+Y->Y/V.,/			Use Y->Y/V to reduce for terminal symbol /
+Y->Y/V.,5			Use Y->Y/V to reduce for terminal symbol 5
+Y->Y/V.,6			Use Y->Y/V to reduce for terminal symbol 6
+I206:
+K->(H).,)			Use K->(H) to reduce for terminal symbol )
+K->(H).,7			Use K->(H) to reduce for terminal symbol 7
+K->(H).,4			Use K->(H) to reduce for terminal symbol 4
+K->(H).,<			Use K->(H) to reduce for terminal symbol <
+K->(H).,8			Use K->(H) to reduce for terminal symbol 8
+K->(H).,>			Use K->(H) to reduce for terminal symbol >
+K->(H).,9			Use K->(H) to reduce for terminal symbol 9
+K->(H).,+			Use K->(H) to reduce for terminal symbol +
+K->(H).,-			Use K->(H) to reduce for terminal symbol -
+K->(H).,*			Use K->(H) to reduce for terminal symbol *
+K->(H).,/			Use K->(H) to reduce for terminal symbol /
+K->(H).,5			Use K->(H) to reduce for terminal symbol 5
+K->(H).,6			Use K->(H) to reduce for terminal symbol 6
+I207:
+E->E+T.,;			Use E->E+T to reduce for terminal symbol ;
+E->E+T.,+			Use E->E+T to reduce for terminal symbol +
+E->E+T.,-			Use E->E+T to reduce for terminal symbol -
+T->T.*U,;			action(*)=I170
+T->T./U,;			action(/)=I171
+T->T.*U,+
+T->T./U,+
+T->T.*U,-
+T->T./U,-
+T->T.*U,*
+T->T./U,*
+T->T.*U,/
+T->T./U,/
+I208:
+E->E-T.,;			Use E->E-T to reduce for terminal symbol ;
+E->E-T.,+			Use E->E-T to reduce for terminal symbol +
+E->E-T.,-			Use E->E-T to reduce for terminal symbol -
+T->T.*U,;			action(*)=I170
+T->T./U,;			action(/)=I171
+T->T.*U,+
+T->T./U,+
+T->T.*U,-
+T->T./U,-
+T->T.*U,*
+T->T./U,*
+T->T.*U,/
+T->T./U,/
+I209:
+T->T*U.,;			Use T->T*U to reduce for terminal symbol ;
+T->T*U.,+			Use T->T*U to reduce for terminal symbol +
+T->T*U.,-			Use T->T*U to reduce for terminal symbol -
+T->T*U.,*			Use T->T*U to reduce for terminal symbol *
+T->T*U.,/			Use T->T*U to reduce for terminal symbol /
+I210:
+T->T/U.,;			Use T->T/U to reduce for terminal symbol ;
+T->T/U.,+			Use T->T/U to reduce for terminal symbol +
+T->T/U.,-			Use T->T/U to reduce for terminal symbol -
+T->T/U.,*			Use T->T/U to reduce for terminal symbol *
+T->T/U.,/			Use T->T/U to reduce for terminal symbol /
+I211:
+O->(E).,;			Use O->(E) to reduce for terminal symbol ;
+O->(E).,+			Use O->(E) to reduce for terminal symbol +
+O->(E).,-			Use O->(E) to reduce for terminal symbol -
+O->(E).,*			Use O->(E) to reduce for terminal symbol *
+O->(E).,/			Use O->(E) to reduce for terminal symbol /
+I212:
+E->E+.T,)			goto(T)=I220
+E->E+.T,+
+E->E+.T,-
+T->.T*U,)
+T->.T/U,)
+T->.U,)			goto(U)=I175
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,)			action(-)=I176
+U->.O,)			goto(O)=I177
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),)			action(()=I178
+O->.2,)			action(2)=I179
+O->.3,)			action(3)=I180
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I213:
+E->E-.T,)			goto(T)=I221
+E->E-.T,+
+E->E-.T,-
+T->.T*U,)
+T->.T/U,)
+T->.U,)			goto(U)=I175
+T->.T*U,+
+T->.T/U,+
+T->.U,+
+T->.T*U,-
+T->.T/U,-
+T->.U,-
+T->.T*U,*
+T->.T/U,*
+T->.U,*
+T->.T*U,/
+T->.T/U,/
+T->.U,/
+U->.-U,)			action(-)=I176
+U->.O,)			goto(O)=I177
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),)			action(()=I178
+O->.2,)			action(2)=I179
+O->.3,)			action(3)=I180
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I214:
+T->T*.U,)			goto(U)=I222
+T->T*.U,+
+T->T*.U,-
+T->T*.U,*
+T->T*.U,/
+U->.-U,)			action(-)=I176
+U->.O,)			goto(O)=I177
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),)			action(()=I178
+O->.2,)			action(2)=I179
+O->.3,)			action(3)=I180
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I215:
+T->T/.U,)			goto(U)=I223
+T->T/.U,+
+T->T/.U,-
+T->T/.U,*
+T->T/.U,/
+U->.-U,)			action(-)=I176
+U->.O,)			goto(O)=I177
+U->.-U,+
+U->.O,+
+U->.-U,-
+U->.O,-
+U->.-U,*
+U->.O,*
+U->.-U,/
+U->.O,/
+O->.(E),)			action(()=I178
+O->.2,)			action(2)=I179
+O->.3,)			action(3)=I180
+O->.(E),+
+O->.2,+
+O->.3,+
+O->.(E),-
+O->.2,-
+O->.3,-
+O->.(E),*
+O->.2,*
+O->.3,*
+O->.(E),/
+O->.2,/
+O->.3,/
+I216:
+U->-U.,)			Use U->-U to reduce for terminal symbol )
+U->-U.,+			Use U->-U to reduce for terminal symbol +
+U->-U.,-			Use U->-U to reduce for terminal symbol -
+U->-U.,*			Use U->-U to reduce for terminal symbol *
+U->-U.,/			Use U->-U to reduce for terminal symbol /
+I217:
+O->(E.),)			action())=I224
+O->(E.),+
+O->(E.),-
+O->(E.),*
+O->(E.),/
+E->E.+T,)			action(+)=I212
+E->E.-T,)			action(-)=I213
+E->E.+T,+
+E->E.-T,+
+E->E.+T,-
+E->E.-T,-
+I218:
+F->2=E;.,dw			Use F->2=E; to reduce for terminal symbol dw
+F->2=E;.,e			Use F->2=E; to reduce for terminal symbol e
+I219:
+B->{DS}.,dw			Use B->{DS} to reduce for terminal symbol dw
+B->{DS}.,e			Use B->{DS} to reduce for terminal symbol e
+I220:
+E->E+T.,)			Use E->E+T to reduce for terminal symbol )
+E->E+T.,+			Use E->E+T to reduce for terminal symbol +
+E->E+T.,-			Use E->E+T to reduce for terminal symbol -
+T->T.*U,)			action(*)=I214
+T->T./U,)			action(/)=I215
+T->T.*U,+
+T->T./U,+
+T->T.*U,-
+T->T./U,-
+T->T.*U,*
+T->T./U,*
+T->T.*U,/
+T->T./U,/
+I221:
+E->E-T.,)			Use E->E-T to reduce for terminal symbol )
+E->E-T.,+			Use E->E-T to reduce for terminal symbol +
+E->E-T.,-			Use E->E-T to reduce for terminal symbol -
+T->T.*U,)			action(*)=I214
+T->T./U,)			action(/)=I215
+T->T.*U,+
+T->T./U,+
+T->T.*U,-
+T->T./U,-
+T->T.*U,*
+T->T./U,*
+T->T.*U,/
+T->T./U,/
+I222:
+T->T*U.,)			Use T->T*U to reduce for terminal symbol )
+T->T*U.,+			Use T->T*U to reduce for terminal symbol +
+T->T*U.,-			Use T->T*U to reduce for terminal symbol -
+T->T*U.,*			Use T->T*U to reduce for terminal symbol *
+T->T*U.,/			Use T->T*U to reduce for terminal symbol /
+I223:
+T->T/U.,)			Use T->T/U to reduce for terminal symbol )
+T->T/U.,+			Use T->T/U to reduce for terminal symbol +
+T->T/U.,-			Use T->T/U to reduce for terminal symbol -
+T->T/U.,*			Use T->T/U to reduce for terminal symbol *
+T->T/U.,/			Use T->T/U to reduce for terminal symbol /
+I224:
+O->(E).,)			Use O->(E) to reduce for terminal symbol )
+O->(E).,+			Use O->(E) to reduce for terminal symbol +
+O->(E).,-			Use O->(E) to reduce for terminal symbol -
+O->(E).,*			Use O->(E) to reduce for terminal symbol *
+O->(E).,/			Use O->(E) to reduce for terminal symbol /

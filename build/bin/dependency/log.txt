@@ -1,0 +1,386 @@
+shift { into stack
+shift int into stack
+shift a into stack
+reduce with A->h2
+shift , into stack
+shift b into stack
+reduce with A->A,2
+shift , into stack
+shift a into stack
+reduce with A->A,2
+shift ; into stack
+shift double into stack
+shift c into stack
+reduce with A->z2
+shift , into stack
+shift d into stack
+reduce with A->A,2
+shift ; into stack
+shift int into stack
+shift e into stack
+reduce with A->h2
+shift ; into stack
+shift int into stack
+shift b into stack
+reduce with A->h2
+shift ; into stack
+reduce with D->@
+reduce with D->A;D
+reduce with D->A;D
+reduce with D->A;D
+reduce with D->A;D
+reduce with S->@
+shift e into stack
+shift = into stack
+shift 1 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->T
+shift + into stack
+shift 5 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->E+T
+shift - into stack
+shift ( into stack
+shift 3 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+shift * into stack
+shift ( into stack
+shift 4 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+shift / into stack
+shift 2 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->T/U
+reduce with E->T
+shift ) into stack
+reduce with O->(E)
+reduce with U->O
+reduce with T->T*U
+reduce with E->T
+shift ) into stack
+reduce with O->(E)
+reduce with U->O
+reduce with T->U
+reduce with E->E-T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift a into stack
+shift = into stack
+shift 1.3e3 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift if into stack
+shift ( into stack
+shift a into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+shift < into stack
+shift 1 into stack
+reduce with K->3
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->R<X
+reduce with Q->R
+reduce with M->Q
+reduce with J->M
+reduce with H->J
+shift || into stack
+reduce with I->H5
+shift a into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+shift > into stack
+shift 3 into stack
+error recover: reduce with K->3
+error recover: reduce with V->K
+error recover: reduce with Y->V
+error recover: reduce with X->Y
+error recover: reduce with R->R>X
+error recover: reduce with Q->R
+error recover: reduce with M->Q
+error recover: reduce with J->M
+error recover: reduce with H->IJ
+error recover: shift ) into stack
+reduce with K->(H)
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+reduce with M->Q
+reduce with J->M
+reduce with H->J
+reduce with C->iH
+shift { into stack
+reduce with D->@
+reduce with S->@
+shift a into stack
+shift = into stack
+shift 3 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift b into stack
+shift = into stack
+shift b into stack
+reduce with O->2
+reduce with U->O
+reduce with T->U
+reduce with E->T
+shift - into stack
+shift 1 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->E-T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift } into stack
+reduce with B->{DS}
+reduce with F->B
+reduce with F->CF
+reduce with S->SF
+shift while into stack
+reduce with Z->w
+shift ( into stack
+shift a into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+shift >= into stack
+shift 10 into stack
+reduce with K->3
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->R9X
+reduce with Q->R
+reduce with M->Q
+reduce with J->M
+shift && into stack
+reduce with N->J6
+shift b into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+reduce with M->Q
+reduce with J->NM
+reduce with H->J
+shift ) into stack
+reduce with K->(H)
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+reduce with M->Q
+reduce with J->M
+reduce with H->J
+reduce with W->ZH
+shift { into stack
+reduce with D->@
+reduce with S->@
+shift if into stack
+shift ( into stack
+shift a into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+shift == into stack
+shift a into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+shift * into stack
+shift b into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->Y*V
+reduce with X->Y
+reduce with R->X
+reduce with Q->Q7R
+reduce with M->Q
+reduce with J->M
+reduce with H->J
+shift ) into stack
+reduce with K->(H)
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+reduce with M->Q
+reduce with J->M
+reduce with H->J
+reduce with C->iH
+shift { into stack
+reduce with D->@
+reduce with S->@
+shift a into stack
+shift = into stack
+shift a into stack
+reduce with O->2
+reduce with U->O
+reduce with T->U
+reduce with E->T
+shift - into stack
+shift 1 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->E-T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift b into stack
+shift = into stack
+shift b into stack
+reduce with O->2
+reduce with U->O
+reduce with T->U
+reduce with E->T
+shift + into stack
+shift 1 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->E+T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift } into stack
+reduce with B->{DS}
+reduce with F->B
+reduce with F->CF
+reduce with S->SF
+shift } into stack
+reduce with B->{DS}
+reduce with F->B
+reduce with F->WF
+reduce with S->SF
+shift do into stack
+reduce with Z->d
+shift { into stack
+reduce with D->@
+reduce with S->@
+shift a into stack
+shift = into stack
+shift 1 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+reduce with E->T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift } into stack
+reduce with B->{DS}
+reduce with F->B
+shift while into stack
+reduce with Z->w
+reduce with L->ZFZ
+shift ( into stack
+shift a into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+shift == into stack
+shift b into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->Q7R
+reduce with M->Q
+reduce with J->M
+reduce with H->J
+shift || into stack
+reduce with I->H5
+shift c into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+shift != into stack
+shift d into stack
+reduce with K->2
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->Q4R
+reduce with M->Q
+reduce with J->M
+reduce with H->IJ
+shift ) into stack
+reduce with K->(H)
+reduce with V->K
+reduce with Y->V
+reduce with X->Y
+reduce with R->X
+reduce with Q->R
+reduce with M->Q
+reduce with J->M
+reduce with H->J
+shift ; into stack
+reduce with F->LH;
+reduce with S->SF
+shift b into stack
+shift = into stack
+shift 2 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->U
+shift / into stack
+shift 0 into stack
+reduce with O->3
+reduce with U->O
+reduce with T->T/U
+reduce with E->T
+shift ; into stack
+reduce with F->2=E;
+reduce with S->SF
+shift } into stack
+reduce with B->{DS}
+reduce with P->B
